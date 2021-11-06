@@ -1,0 +1,56 @@
+<p-table [value]="members" styleClass="p-datatable-striped" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>Team Names</th>
+      <th>Playoff Appearances</th>
+      <th>Championships <i class="pi pi-dollar"></i></th>
+      <th>Best Score</th>
+      <th>Worst Score</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-member>
+    <tr>
+      <td><p-button icon="pi pi-external-link" label="{{member.name}}" styleClass="p-button-warning" (onClick)="showRecords(member.id)"></p-button></td>
+      <td><div *ngFor="let name of member.teamname"><span>{{name}}</span></div></td>
+      <td><div *ngFor="let year of member.playoffs"><span>{{year}}</span></div></td>
+      <td><div *ngIf="member.champion.length !== 0; else noChamp"><div *ngFor="let year of member.champion"><span>{{year}}</span></div></div></td>
+      <ng-template #noChamp>Never Won</ng-template>
+      <td>
+        <div>Winner: {{leagueMembers[member.best.winnerId -1].firstname}} {{leagueMembers[member.best.winnerId -1].lastname}}</div>
+        <div>Loser: {{leagueMembers[member.best.loserId -1].firstname}} {{leagueMembers[member.best.loserId -1].lastname}}</div>
+        <div>Score: {{member.best.winningScore}} - {{member.best.losingScore}}</div>
+        <div>Season: {{member.best.season}}</div>
+        <div>Week: {{member.best.weekNumber}}</div>
+      </td>
+      <td>
+        <div>Winner: {{leagueMembers[member.worst.winnerId -1].firstname}} {{leagueMembers[member.worst.winnerId -1].lastname}}</div>
+        <div>Loser: {{leagueMembers[member.worst.loserId -1].firstname}} {{leagueMembers[member.worst.loserId -1].lastname}}</div>
+        <div>Score: {{member.worst.winningScore}} - {{member.worst.losingScore}}</div>
+        <div>Season: {{member.worst.season}}</div>
+        <div>Week: {{member.worst.weekNumber}}</div>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<p-dialog header="Individual Records" [(visible)]="showRecordWindow" [modal]="true" [style]="{width: '50vw'}"
+          [draggable]="false" [resizable]="true" *ngIf="showRecordWindow">
+  <h3>{{leagueMembers[records[0].id -1].firstname}} {{leagueMembers[records[0].id -1].lastname}}'s Overall Record: {{records[0].overAllRecord}}</h3>
+  <p-table [value]="records" styleClass="p-datatable-striped white-text" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Opponent</th>
+        <th>Record</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-record>
+      <tr>
+        <td>{{leagueMembers[record.opponentId -1].firstname}} {{leagueMembers[record.opponentId -1].lastname}}</td>
+        <td>{{record.record}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-times" (click)="showRecordWindow=false" label="Close" styleClass="p-button-text"></p-button>
+  </ng-template>
+</p-dialog>

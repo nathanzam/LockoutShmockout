@@ -1,0 +1,54 @@
+<h4>Table Select</h4>
+<p-dropdown [options]="tables" (onChange)="dropDownChange($event.value)"></p-dropdown>
+<p-table [value]="resultsWithNames" styleClass="p-datatable-striped" responsiveLayout="scroll" *ngIf="selectedTable == 'All'"
+         [globalFilterFields]="['season']">
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="season">Season <p-sortIcon field="season"></p-sortIcon></th>
+      <th pSortableColumn="winnerName">Winner <p-sortIcon field="winnerName"></p-sortIcon></th>
+      <th pSortableColumn="loserName">Loser <p-sortIcon field="loserName"></p-sortIcon></th>
+      <th pSortableColumn="winningScore">Score <p-sortIcon field="winningScore"></p-sortIcon></th>
+      <th>Week</th>
+    </tr>
+    <tr>
+      <th><p-columnFilter type="text" field="season"></p-columnFilter></th>
+      <th><p-columnFilter type="text" field="winnerName"></p-columnFilter></th>
+      <th><p-columnFilter type="text" field="loserName"></p-columnFilter></th>
+      <th></th>
+      <th><p-columnFilter type="text" field="weekNumber"></p-columnFilter></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-result>
+    <tr>
+      <td>{{result.season}}</td>
+      <td>{{result.winnerName}}</td>
+      <td>{{result.loserName}}</td>
+      <td>{{result.winningScore}} - {{result.losingScore}}</td>
+      <td style="text-align:center">{{result.weekNumber}}</td>
+    </tr>
+  </ng-template>
+</p-table>
+<div *ngIf="selectedTable == 'Stats'">
+  <h5>Season: </h5>
+  <p-dropdown [options]="seasons" (onChange)="switchSeason($event.value)"></p-dropdown>
+  <p-table #season [value]="summaries" styleClass="p-datatable-striped" responsiveLayout="scroll" *ngIf="season">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Manager</th>
+        <th pSortableColumn="totalPoints">Total Points Scored <p-sortIcon field="totalPoints"></p-sortIcon></th>
+        <th pSortableColumn="totalAgainst">Total Points Against <p-sortIcon field="totalAgainst"></p-sortIcon></th>
+        <th pSortableColumn="wins">Record <p-sortIcon field="wins"></p-sortIcon></th>
+        <th pSortableColumn="moves">Moves <p-sortIcon field="moves"></p-sortIcon></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-summary>
+      <tr *ngIf="summary.wins != 0 && summary.losses != 0">
+        <td>{{members[summary.id - 1].firstname}} {{members[summary.id - 1].lastname}}</td>
+        <td>{{summary.totalPoints | number: '1.0-2'}}</td>
+        <td>{{summary.totalAgainst | number: '1.0-2'}}</td>
+        <td>{{summary.wins}} - {{summary.losses}}</td>
+        <td>{{summary.moves}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

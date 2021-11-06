@@ -1,0 +1,19 @@
+body{
+  margin: 1%;
+}
+
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even){
+  color: black;
+}
+
+.p-datatable.p-datatable-striped.white-text .p-datatable-tbody > tr:nth-child(even) {
+  color: white !important;
+}
+
+div .p-hidden-accessible{
+  display: none !important;
+}
+
+.p-datatable .p-sortable-column:not(.p-highlight):hover{
+  color: black !important;
+}
