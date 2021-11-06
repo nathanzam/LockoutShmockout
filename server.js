@@ -9,10 +9,10 @@ const express = require('express');
 const app = express();
 
 app.use(requireHTTPS);
-app.use(express.static('./dist/LockoutShmockout'));
+app.use(express.static('./dist/angular-lockout-schmockout'));
 
 app.get('/*', (req, res) => {
-  res.sendFile('index.html', { root: 'dist/LockoutShmockout/' })
+  res.sendFile('index.html', { root: 'dist/angular-lockout-schmockout/' })
 });
 
 app.listen(process.env.PORT || 8080);
