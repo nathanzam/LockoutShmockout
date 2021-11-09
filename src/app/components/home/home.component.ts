@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
 
   members: Member[] = [];
   results: Result[] = [];
-  resultsWithNames: ResultNames[] = [];
   scores: Score[] = [];
   summaries: Summary[] = [];
   season: number = 2011;
@@ -38,11 +37,6 @@ export class HomeComponent implements OnInit {
     { label: '2020', value: 2020 },
     { label: '2021', value: 2021 }
   ]
-  selectedTable: string = 'All';
-  tables: SelectItem[] = [
-    { label: 'Result of Every Match', value: 'All' },
-    { label: 'Season Total Stats', value: 'Stats' }
-  ];
 
   constructor(private memberService: MemberService,
     private moveService: MovesService,
@@ -56,21 +50,6 @@ export class HomeComponent implements OnInit {
     this.members.forEach(member => {
       this.calculateSummary(member.id);
     })
-    this.results.forEach(result => {
-      let res: ResultNames = {
-        season: result.season,
-        winnerName: this.members[result.winnerId - 1].firstname + ' ' + this.members[result.winnerId - 1].lastname,
-        loserName: this.members[result.loserId - 1].firstname + ' ' + this.members[result.loserId - 1].lastname,
-        winningScore: result.winningScore,
-        losingScore: result.losingScore,
-        weekNumber: result.weekNumber
-      }
-      this.resultsWithNames.push(res);
-    })
-  }
-
-  dropDownChange(value: string): void {
-    this.selectedTable = value;
   }
 
   switchSeason(value: number): void {

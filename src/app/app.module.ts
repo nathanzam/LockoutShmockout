@@ -10,20 +10,27 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
 import { ScrollTopModule } from 'primeng/scrolltop';
+import { CarouselModule } from 'primeng/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LeagueMembersComponent } from './components/league-members/league-members.component';
 import { HomeComponent } from './components/home/home.component';
+import { ResultsComponent } from './components/results/results.component';
 import { MemberService } from './services/member-service.service';
 import { MovesService } from './services/moves.service';
-import { ResultsService } from './services/results.service'
+import { ResultsService } from './services/results.service';
+import { LuckComponent } from './components/luck/luck.component';
+import { CarrieComponent } from './components/carrie/carrie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeagueMembersComponent,
-    HomeComponent
+    HomeComponent,
+    ResultsComponent,
+    LuckComponent,
+    CarrieComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,8 @@ import { ResultsService } from './services/results.service'
     DropdownModule,
     InputTextModule,
     DialogModule,
-    ScrollTopModule
+    ScrollTopModule,
+    CarouselModule
   ],
   providers: [
     MemberService,
