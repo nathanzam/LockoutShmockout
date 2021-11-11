@@ -4,7 +4,8 @@
       <th>Name</th>
       <th>Team Names</th>
       <th>Playoff Appearances</th>
-      <th>Championships <i class="pi pi-dollar"></i></th>
+      <th>Championships <img src="../../assets/trophy.png" style="height: 2em" /></th>
+      <th>Drafts</th>
       <th>Best Score</th>
       <th>Worst Score</th>
     </tr>
@@ -16,6 +17,7 @@
       <td><div *ngFor="let year of member.playoffs"><span>{{year}}</span></div></td>
       <td><div *ngIf="member.champion.length !== 0; else noChamp"><div *ngFor="let year of member.champion"><span>{{year}}</span></div></div></td>
       <ng-template #noChamp>Never Won</ng-template>
+      <td><div *ngFor="let draft of member.draft"><span>{{draft.season}}: {{draft.draft}}</span></div></td>
       <td>
         <div *ngIf="member.best.winnerId == 4; else notKennyWinner">Winner: <a routerLink="/ForKenny">{{leagueMembers[member.best.winnerId -1].firstname}} {{leagueMembers[member.best.winnerId -1].lastname}}</a></div>
         <ng-template #notKennyWinner><div>Winner: {{leagueMembers[member.best.winnerId -1].firstname}} {{leagueMembers[member.best.winnerId -1].lastname}}</div></ng-template>

@@ -6,6 +6,7 @@
       <th pSortableColumn="totalPoints">Total Points Scored <p-sortIcon field="totalPoints"></p-sortIcon></th>
       <th pSortableColumn="totalAgainst">Total Points Against <p-sortIcon field="totalAgainst"></p-sortIcon></th>
       <th pSortableColumn="wins">Record <p-sortIcon field="wins"></p-sortIcon></th>
+      <th pSortableColumn="draft">Draft Position <p-sortIcon field="draft"></p-sortIcon></th>
       <th pSortableColumn="moves">Moves <p-sortIcon field="moves"></p-sortIcon></th>
     </tr>
   </ng-template>
@@ -15,7 +16,9 @@
       <ng-template #notKenny><td>{{members[summary.id - 1].firstname}} {{members[summary.id - 1].lastname}}</td></ng-template>
       <td>{{summary.totalPoints | number: '1.0-2'}}</td>
       <td>{{summary.totalAgainst | number: '1.0-2'}}</td>
-      <td>{{summary.wins}} - {{summary.losses}}</td>
+      <td *ngIf="summary.champion; else notChamp">{{summary.wins}} - {{summary.losses}} <img src="../../assets/trophy.png" style="height: 2em" /></td>
+      <ng-template #notChamp><td>{{summary.wins}} - {{summary.losses}}</td></ng-template>
+      <td>{{summary.draft}}</td>
       <td>{{summary.moves}}</td>
     </tr>
   </ng-template>

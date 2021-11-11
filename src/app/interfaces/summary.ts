@@ -6,4 +6,6 @@ export interface Summary {
   wins: number;
   losses: number;
   moves: number;
+  draft: number;
+  champion: boolean;
 }

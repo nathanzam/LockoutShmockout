@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MemberService } from '../../services/member-service.service';
+import { MovesService } from '../../services/moves.service';
 import { ResultsService } from '../../services/results.service';
 import { ScoreService } from '../../services/score.service';
 import { Member, MemberPlus } from '../../interfaces/member';
@@ -21,6 +22,7 @@ export class LeagueMembersComponent implements OnInit {
   showRecordWindow: boolean = false;
 
   constructor(private memberService: MemberService,
+    private moveService: MovesService,
     private resultService: ResultsService,
     private scoreService: ScoreService) { }
 
@@ -48,7 +50,8 @@ export class LeagueMembersComponent implements OnInit {
       teamname: teamname,
       playoffs: playoffs,
       best: best,
-      worst: worst
+      worst: worst,
+      draft: this.moveService.getAllDraftsByManagerId(id)
     };
     this.members.push(member);
   }

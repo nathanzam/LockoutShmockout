@@ -1,5 +1,6 @@
 import { Result } from './result';
 import { Score } from './score';
+import { Draft } from './moves';
 
 export interface Member {
   id: number;
@@ -16,6 +17,7 @@ export interface MemberPlus {
   champion: string[];
   teamname: string[];
   playoffs: string[];
+  draft: Draft[];
   best: Result;
   worst: Result;
 }

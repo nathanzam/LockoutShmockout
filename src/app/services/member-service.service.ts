@@ -124,4 +124,8 @@ export class MemberService {
   getMembers(): Member[] {
     return this.members;
   }
+
+  checkIfChampion(id: number, season: number): boolean {
+    return this.members.filter(member => member.id == id)[0].champion.some(year => year == season.toString());
+  }
 }

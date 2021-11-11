@@ -68,7 +68,9 @@ export class HomeComponent implements OnInit {
       losses: this.results.filter(y => y.loserId == personId && y.season == this.season).length,
       totalPoints: 0,
       totalAgainst: this.resultService.getTotalPointsAgainst(personId, this.season),
-      moves: this.moveService.getMovesByManagerBySeason(personId, this.season)
+      moves: this.moveService.getMovesByManagerBySeason(personId, this.season),
+      draft: this.moveService.getDraftSpotByManagerBySeason(personId, this.season),
+      champion: this.memberService.checkIfChampion(personId, this.season)
     };
     this.scores.forEach((score) => {
       if (score.id == personId && score.season == this.season) {
