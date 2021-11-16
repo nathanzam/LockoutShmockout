@@ -129,13 +129,13 @@ export class MovesService {
     { id: 17, season: 2020, moves: 29, draft: 7 },
     { id: 18, season: 2020, moves: 9, draft: 4 },
     { id: 19, season: 2020, moves: 12, draft: 3 },
-    { id: 1, season: 2021, moves: 21, draft: 8 },
+    { id: 1, season: 2021, moves: 22, draft: 8 },
     { id: 2, season: 2021, moves: 15, draft: 6 },
     { id: 3, season: 2021, moves: 23, draft: 4 },
     { id: 4, season: 2021, moves: 4, draft: 3 },
-    { id: 5, season: 2021, moves: 10, draft: 1 },
+    { id: 5, season: 2021, moves: 11, draft: 1 },
     { id: 11, season: 2021, moves: 9, draft: 7 },
-    { id: 17, season: 2021, moves: 1, draft: 5 },
+    { id: 17, season: 2021, moves: 16, draft: 5 },
     { id: 18, season: 2021, moves: 8, draft: 2 }
   ];
 
