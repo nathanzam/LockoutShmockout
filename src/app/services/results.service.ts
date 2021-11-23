@@ -829,7 +829,11 @@ export class ResultsService {
     { season: 2021, winnerId: 18, loserId: 11, winningScore: 119.96, losingScore: 88.92, weekNumber: 10 },
     { season: 2021, winnerId: 4, loserId: 17, winningScore: 129.08, losingScore: 122.88, weekNumber: 10 },
     { season: 2021, winnerId: 5, loserId: 2, winningScore: 146.06, losingScore: 98.92, weekNumber: 10 },
-    { season: 2021, winnerId: 3, loserId: 1, winningScore: 134.14, losingScore: 109.72, weekNumber: 10 }
+    { season: 2021, winnerId: 3, loserId: 1, winningScore: 134.14, losingScore: 109.72, weekNumber: 10 },
+    { season: 2021, winnerId: 18, loserId: 3, winningScore: 185.42, losingScore: 101.5, weekNumber: 11 },
+    { season: 2021, winnerId: 2, loserId: 4, winningScore: 154.42, losingScore: 108.46, weekNumber: 11 },
+    { season: 2021, winnerId: 1, loserId: 17, winningScore: 151.92, losingScore: 120.24, weekNumber: 11 },
+    { season: 2021, winnerId: 5, loserId: 11, winningScore: 137.82, losingScore: 134.18, weekNumber: 11 }
   ];
 
   getResults(): Result[] {
