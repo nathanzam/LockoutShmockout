@@ -9,6 +9,8 @@ import { CarouselModule } from 'primeng/carousel';
 export class CarrieComponent implements OnInit {
 
   carries: string[] = [
+    'http://24.media.tumblr.com/d8de5253f29d50a08c8d5ac41ffaaaf6/tumblr_mlvu08HeI11qeeekco1_500.gif',
+    'https://i.gifer.com/origin/1b/1beb1edee6a29bba7a9061264f40a6e6_w200.gif',
     'https://media0.giphy.com/media/2IVLw7ncJJB5e/giphy.gif?cid=ecf05e47crncdio9d1am21343mxmb5viyoynp1spbv8hing8&rid=giphy.gif&ct=g',
     'https://media3.giphy.com/media/21QEwX6bIZKOEs62fO/giphy.gif?cid=ecf05e47oj8dt2pkol5dmxq57v46tw50ub79kxobq8iqrepi&rid=giphy.gif&ct=g',
     'https://media4.giphy.com/media/m1aKu8Dx6zKmc/giphy.gif?cid=ecf05e47oj8dt2pkol5dmxq57v46tw50ub79kxobq8iqrepi&rid=giphy.gif&ct=g',

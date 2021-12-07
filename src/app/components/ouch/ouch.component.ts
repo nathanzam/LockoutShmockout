@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Member, MemberLuck } from '../../interfaces/member';
-import { Result } from '../../interfaces/result';
+import { Result, ResultNames } from '../../interfaces/result';
 import { Score } from '../../interfaces/score';
+import { Summary } from '../../interfaces/summary';
 import { MemberService } from '../../services/member-service.service';
 import { ResultsService } from '../../services/results.service';
 import { ScoreService } from '../../services/score.service';
 
 @Component({
-  selector: 'app-luck',
-  templateUrl: './luck.component.html',
-  styleUrls: ['./luck.component.scss']
+  selector: 'app-ouch',
+  templateUrl: './ouch.component.html',
+  styleUrls: ['./ouch.component.scss']
 })
-export class LuckComponent implements OnInit {
+export class OuchComponent implements OnInit {
 
   members: Member[] = [];
   results: Result[] = [];
@@ -46,25 +47,19 @@ export class LuckComponent implements OnInit {
       for (var week of weeks) {
         var resultsInAWeek = this.results.filter(x => x.season == season && x.weekNumber == week);
         var scoresInAWeek = this.scores.filter(x => x.season == season && x.weekNumber == week)
-          .sort(function (a, b) { return a.score - b.score });        
+          .sort(function (a, b) { return a.score - b.score });
+        var userScore = scoresInAWeek.filter(x => x.id == id)[0];
         if (scoresInAWeek.some(x => x.id == id)) {
-          var userScore = scoresInAWeek.filter(x => x.id == id)[0];
-          var scoreRankForTheWeek = scoresInAWeek.findIndex(x => x == userScore);
-          if (season != 2021 && scoreRankForTheWeek < 6 && resultsInAWeek.some(x => x.winnerId == id)) {
-            luckyWinsCount += 1;
-            luckyWeeks.push(userScore);
+          var userMatch = resultsInAWeek.filter(x => x.winnerId == id || x.loserId == id)[0];
+          if ((userMatch.loserId == id && scoresInAWeek.findIndex(x => x.id == id) == scoresInAWeek.length - 2)) {
+            unluckyLossesCount += 1
+            unluckyWeeks.push(userScore)
           }
-          else if (season == 2021 && scoreRankForTheWeek < 4 && resultsInAWeek.some(x => x.winnerId == id)) {
-            luckyWinsCount += 1;
-            luckyWeeks.push(userScore);
-          }
-          else if (season != 2021 && scoreRankForTheWeek > 5 && resultsInAWeek.some(x => x.loserId == id)) {
-            unluckyLossesCount += 1;
-            unluckyWeeks.push(userScore);
-          }
-          else if (season == 2021 && scoreRankForTheWeek > 3 && resultsInAWeek.some(x => x.loserId == id)) {
-            unluckyLossesCount += 1;
-            unluckyWeeks.push(userScore);
+          else if (userMatch.winnerId == id && scoresInAWeek.findIndex(x => x.id == id) == scoresInAWeek.length - 1) {
+            if (scoresInAWeek.findIndex(x => x.id == userMatch.loserId) == scoresInAWeek.length - 2) {
+              luckyWinsCount += 1;
+              luckyWeeks.push(userScore);
+            }
           }
         }
       }
