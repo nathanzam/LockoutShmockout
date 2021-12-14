@@ -28,19 +28,19 @@ export class MemberService {
       teamname: ['Neverland Lost Boys', 'Texas Lone Ranger', 'Ridgemont High Bad Teacher', 'Baaaadaaaass G.O.A.T.',
         'Thoughts from Willy Wonka', 'Yellow Rose of Texas', 'Hanging with Mr. Bobo', 'Cooper? More Like Pooper',
         'Got Me A Little Chubby', 'Feb 2nd × Idiot = COVID', 'Something TBD'],
-      playoffs: ['2011', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+      playoffs: ['2011', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021']
     },
     {
       id: 4, firstname: 'Kenny', lastname: 'Crapse', champion: [],
       teamname: ['Wichita, Kan. Bout Willis', 'Redskins Name Changing Assoc.', 'Every Day I\'m Russell\'n',
         'Isaiah Fisher\'s Stepdad', 'Make AMurrayca Great Again', 'DeMarcoroni And Cheese', 'Miami Guice',
         'Fantasy Football Team'],
-      playoffs: ['2011', '2012', '2014', '2017', '2020']
+      playoffs: ['2011', '2012', '2014', '2017', '2020', '2021']
     },
     {
       id: 5, firstname: 'Kevin', lastname: 'Bandy', champion: ['2019'],
       teamname: ['Atlanta Sausage Kings', 'PSU Shower Todd LeFondlers', 'Show Me Your Torts', 'I Rest My Case Keenum'],
-      playoffs: ['2011', '2012', '2015', '2016', '2017', '2018', '2019']
+      playoffs: ['2011', '2012', '2015', '2016', '2017', '2018', '2019', '2021']
     },
     {
       id: 6, firstname: 'Alex', lastname: 'Burtch', champion: [],
@@ -111,7 +111,7 @@ export class MemberService {
       id: 18, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017'],
       teamname: ['Gronkey Punch', 'Rawls in your Face', 'An InCAMvenient Truth', 'Johnson and Johnson', 'Two Browns One Kupp',
         'Jock Strap Kings', 'Dude Looks Like A Brady'],
-      playoffs: ['2017', '2019']
+      playoffs: ['2017', '2019', '2021']
     },
     {
       id: 19, firstname: 'Rebekah', lastname: 'Epley', champion: ['2020'],
