@@ -38,7 +38,7 @@ export class MemberService {
       playoffs: ['2011', '2012', '2014', '2017', '2020', '2021']
     },
     {
-      id: 5, firstname: 'Kevin', lastname: 'Bandy', champion: ['2019'],
+      id: 5, firstname: 'Kevin', lastname: 'Bandy', champion: ['2019', '2021'],
       teamname: ['Atlanta Sausage Kings', 'PSU Shower Todd LeFondlers', 'Show Me Your Torts', 'I Rest My Case Keenum'],
       playoffs: ['2011', '2012', '2015', '2016', '2017', '2018', '2019', '2021']
     },

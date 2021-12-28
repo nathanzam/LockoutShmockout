@@ -9,7 +9,7 @@ import { ResultsService } from '../../services/results.service';
 import { ScoreService } from '../../services/score.service';
 import { TableModule, Table } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
-import { SelectItem } from 'primeng/api';
+import { SelectItem, SortEvent } from 'primeng/api';
 import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
@@ -36,7 +36,10 @@ export class HomeComponent implements OnInit {
     { label: '2013', value: 2013 },
     { label: '2012', value: 2012 },
     { label: '2011', value: 2011 }
-  ]
+  ];
+
+  multiSortMeta: any[] = [];
+
 
   constructor(private memberService: MemberService,
     private moveService: MovesService,
@@ -49,7 +52,10 @@ export class HomeComponent implements OnInit {
     this.scores = this.scoreService.getScores();
     this.members.forEach(member => {
       this.calculateSummary(member.id);
-    })
+    });
+    //this.multiSortMeta = [];
+    //this.multiSortMeta.push({ field: 'wins', order: 1 });
+    //this.multiSortMeta.push({ field: 'totalPoints', order: 1 });
   }
 
   switchSeason(value: number): void {
@@ -79,6 +85,29 @@ export class HomeComponent implements OnInit {
     })
     
     this.summaries.push(summary);
+  }
+
+  customSort(event: SortEvent) {
+    event.data!.sort((data1, data2) => {
+      let value1 = data1[event.field!];
+      let value2 = data2[event.field!];
+      let result = null;      
+
+      if (value1 == null && value2 != null)
+        result = -1;
+      else if (value1 != null && value2 == null)
+        result = 1;
+      else if (value1 == null && value2 == null)
+        result = 0;
+      else if (typeof value1 === 'string' && typeof value2 === 'string')
+        result = value1.localeCompare(value2);
+      else if (event.field === 'wins' && value1 === value2)
+        result = (data1['totalPoints'] < data2['totalPoints']) ? -1 : (data1['totalPoints'] > data2['totalPoints']) ? 1 : 0;
+      else
+        result = (value1 < value2) ? -1 : (value1 > value2) ? 1 : 0;
+
+      return (event.order! * result);
+    })
   }
 
   clear(table: Table) {
