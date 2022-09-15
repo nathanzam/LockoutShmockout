@@ -110,7 +110,7 @@ export class MemberService {
     {
       id: 18, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017'],
       teamname: ['Gronkey Punch', 'Rawls in your Face', 'An InCAMvenient Truth', 'Johnson and Johnson', 'Two Browns One Kupp',
-        'Jock Strap Kings', 'Dude Looks Like A Brady'],
+        'Jock Strap Kings', 'Dude Looks Like A Brady', 'Training Room Heroes'],
       playoffs: ['2017', '2019', '2021']
     },
     {
