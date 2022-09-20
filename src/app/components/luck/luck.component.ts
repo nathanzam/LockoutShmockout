@@ -37,32 +37,39 @@ export class LuckComponent implements OnInit {
     var luckyWeeks: Score[] = [];
     var unluckyWeeks: Score[] = [];
     var manager = this.members[id - 1].firstname + ' ' + this.members[id - 1].lastname;
-    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021];
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+    var seasonsWith8Teams = [2021, 2022];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     for (var season of seasons) {
-      if (season === 2020) {
+      if (season > 2020) {
         weeks.push(14);
       }
       for (var week of weeks) {
         var resultsInAWeek = this.results.filter(x => x.season == season && x.weekNumber == week);
+        //sorted scores from lowest to highest
         var scoresInAWeek = this.scores.filter(x => x.season == season && x.weekNumber == week)
           .sort(function (a, b) { return a.score - b.score });        
         if (scoresInAWeek.some(x => x.id == id)) {
           var userScore = scoresInAWeek.filter(x => x.id == id)[0];
+          // 0 indexed ranking from lowest to highest
           var scoreRankForTheWeek = scoresInAWeek.findIndex(x => x == userScore);
-          if (season != 2021 && scoreRankForTheWeek < 6 && resultsInAWeek.some(x => x.winnerId == id)) {
+          // scoring 7th or worse in 12 team league and win
+          if (!seasonsWith8Teams.includes(season) && scoreRankForTheWeek < 6 && resultsInAWeek.some(x => x.winnerId == id)) {
             luckyWinsCount += 1;
             luckyWeeks.push(userScore);
           }
-          else if (season == 2021 && scoreRankForTheWeek < 4 && resultsInAWeek.some(x => x.winnerId == id)) {
+          // scoring 5th or worse in 8 team league and win
+          else if (seasonsWith8Teams.includes(season) && scoreRankForTheWeek < 4 && resultsInAWeek.some(x => x.winnerId == id)) {
             luckyWinsCount += 1;
             luckyWeeks.push(userScore);
           }
-          else if (season != 2021 && scoreRankForTheWeek > 5 && resultsInAWeek.some(x => x.loserId == id)) {
+          // scoring 6th or better in 12 team league and lose
+          else if (!seasonsWith8Teams.includes(season) && scoreRankForTheWeek > 5 && resultsInAWeek.some(x => x.loserId == id)) {
             unluckyLossesCount += 1;
             unluckyWeeks.push(userScore);
           }
-          else if (season == 2021 && scoreRankForTheWeek > 3 && resultsInAWeek.some(x => x.loserId == id)) {
+          // scoring 4th or better in 8 team league and lose
+          else if (seasonsWith8Teams.includes(season) && scoreRankForTheWeek > 3 && resultsInAWeek.some(x => x.loserId == id)) {
             unluckyLossesCount += 1;
             unluckyWeeks.push(userScore);
           }
