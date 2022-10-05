@@ -848,12 +848,20 @@ export class ResultsService {
     { season: 2021, winnerId: 2, loserId: 17, winningScore: 135.78, losingScore: 100.02, weekNumber: 14 },
     { season: 2022, winnerId: 18, loserId: 5, winningScore: 150.72, losingScore: 85.52, weekNumber: 1 },
     { season: 2022, winnerId: 4, loserId: 3, winningScore: 174.8, losingScore: 111.4, weekNumber: 1 },
-    { season: 2022, winnerId: 11, loserId: 17, winningScore: 151.76, losingScore: 123.78, weekNumber: 1 },
+    { season: 2022, winnerId: 17, loserId: 11, winningScore: 151.76, losingScore: 123.78, weekNumber: 1 },
     { season: 2022, winnerId: 2, loserId: 1, winningScore: 123.04, losingScore: 114.08, weekNumber: 1 },
     { season: 2022, winnerId: 4, loserId: 5, winningScore: 208.7, losingScore: 147.48, weekNumber: 2 },
     { season: 2022, winnerId: 3, loserId: 17, winningScore: 131.18, losingScore: 103.5, weekNumber: 2 },
     { season: 2022, winnerId: 18, loserId: 2, winningScore: 126.94, losingScore: 103.26, weekNumber: 2 },
-    { season: 2022, winnerId: 11, loserId: 1, winningScore: 140.36, losingScore: 111.32, weekNumber: 2 }
+    { season: 2022, winnerId: 11, loserId: 1, winningScore: 140.36, losingScore: 111.32, weekNumber: 2 },
+    { season: 2022, winnerId: 4, loserId: 17, winningScore: 143.9, losingScore: 104.86, weekNumber: 3 },
+    { season: 2022, winnerId: 5, loserId: 2, winningScore: 141.76, losingScore: 102.88, weekNumber: 3 },
+    { season: 2022, winnerId: 1, loserId: 3, winningScore: 115.72, losingScore: 99.84, weekNumber: 3 },
+    { season: 2022, winnerId: 18, loserId: 11, winningScore: 122.32, losingScore: 97.3, weekNumber: 3 },
+    { season: 2022, winnerId: 18, loserId: 3, winningScore: 133.8, losingScore: 90.82, weekNumber: 4 },
+    { season: 2022, winnerId: 2, loserId: 4, winningScore: 141.2, losingScore: 100.28, weekNumber: 4 },
+    { season: 2022, winnerId: 17, loserId: 1, winningScore: 156.98, losingScore: 147.34, weekNumber: 4 },
+    { season: 2022, winnerId: 5, loserId: 11, winningScore: 154.1, losingScore: 138.42, weekNumber: 4 }
   ];
 
   getResults(): Result[] {

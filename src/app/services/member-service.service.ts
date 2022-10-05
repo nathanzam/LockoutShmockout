@@ -27,7 +27,7 @@ export class MemberService {
       id: 3, firstname: 'Peyton', lastname: 'Bobo', champion: ['2013', '2014', '2018'],
       teamname: ['Neverland Lost Boys', 'Texas Lone Ranger', 'Ridgemont High Bad Teacher', 'Baaaadaaaass G.O.A.T.',
         'Thoughts from Willy Wonka', 'Yellow Rose of Texas', 'Hanging with Mr. Bobo', 'Cooper? More Like Pooper',
-        'Got Me A Little Chubby', 'Feb 2nd × Idiot = COVID', 'Something TBD'],
+        'Got Me A Little Chubby', 'Feb 2nd × Idiot = COVID', 'Something TBD', 'Girl Dad AKA Daddyman'],
       playoffs: ['2011', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021']
     },
     {

@@ -1682,11 +1682,11 @@ export class ScoreService {
     { season: 2021, id: 17, score: 100.02, weekNumber: 14 },
     { season: 2022, id: 18, score: 150.72, weekNumber: 1 },
     { season: 2022, id: 4, score: 174.8, weekNumber: 1 },
-    { season: 2022, id: 11, score: 151.76, weekNumber: 1 },
+    { season: 2022, id: 17, score: 151.76, weekNumber: 1 },
     { season: 2022, id: 2, score: 123.04, weekNumber: 1 },
     { season: 2022, id: 5, score: 85.52, weekNumber: 1 },
     { season: 2022, id: 3, score: 111.4, weekNumber: 1 },
-    { season: 2022, id: 17, score: 123.78, weekNumber: 1 },
+    { season: 2022, id: 11, score: 123.78, weekNumber: 1 },
     { season: 2022, id: 1, score: 114.08, weekNumber: 1 },
     { season: 2022, id: 4, score: 208.7, weekNumber: 2 },
     { season: 2022, id: 3, score: 131.18, weekNumber: 2 },
@@ -1695,7 +1695,23 @@ export class ScoreService {
     { season: 2022, id: 5, score: 147.48, weekNumber: 2 },
     { season: 2022, id: 17, score: 103.5, weekNumber: 2 },
     { season: 2022, id: 2, score: 103.26, weekNumber: 2 },
-    { season: 2022, id: 1, score: 111.32, weekNumber: 2 }
+    { season: 2022, id: 1, score: 111.32, weekNumber: 2 },
+    { season: 2022, id: 4, score: 143.9, weekNumber: 3 },
+    { season: 2022, id: 5, score: 141.76, weekNumber: 3 },
+    { season: 2022, id: 1, score: 115.72, weekNumber: 3 },
+    { season: 2022, id: 18, score: 122.32, weekNumber: 3 },
+    { season: 2022, id: 17, score: 104.86, weekNumber: 3 },
+    { season: 2022, id: 2, score: 102.88, weekNumber: 3 },
+    { season: 2022, id: 3, score: 99.84, weekNumber: 3 },
+    { season: 2022, id: 11, score: 97.3, weekNumber: 3 },
+    { season: 2022, id: 18, score: 133.8, weekNumber: 4 },
+    { season: 2022, id: 2, score: 141.2, weekNumber: 4 },
+    { season: 2022, id: 17, score: 156.98, weekNumber: 4 },
+    { season: 2022, id: 5, score: 154.1, weekNumber: 4 },
+    { season: 2022, id: 3, score: 90.82, weekNumber: 4 },
+    { season: 2022, id: 4, score: 100.28, weekNumber: 4 },
+    { season: 2022, id: 1, score: 147.34, weekNumber: 4 },
+    { season: 2022, id: 11, score: 138.42, weekNumber: 4 }
   ]
 
   getScores(): Score[] {
