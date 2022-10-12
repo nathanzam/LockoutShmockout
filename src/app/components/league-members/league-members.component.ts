@@ -20,6 +20,7 @@ export class LeagueMembersComponent implements OnInit {
   members: MemberPlus[] = [];
   records: UserRecord[] = [];
   showRecordWindow: boolean = false;
+  weeksCount: number = 0;
 
   constructor(private memberService: MemberService,
     private moveService: MovesService,
@@ -36,6 +37,7 @@ export class LeagueMembersComponent implements OnInit {
   showRecords(id: number): void {
     this.showRecordWindow = true;
     this.records = this.resultService.getManagerRecordAgainstOtherManagersById(id);
+    this.weeksCount = this.scoreService.getTotalWeeksWithHighestScore(id);
   }
 
   getMinMax(id: number, name: string, champion: string[], teamname: string[], playoffs: string[]): void {

@@ -1744,5 +1744,28 @@ export class ScoreService {
     return allScoresSorted[allScoresSorted.length - 1];
   }
 
-
+  getTotalWeeksWithHighestScore(id: number): number {
+    var weeksAtNumber1 = 0;
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+    var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    for (var season of seasons) {
+      if (season > 2020) {
+        weeks.push(14);
+      }
+      for (var week of weeks) {
+        //sorted scores from highest to lowest
+        var scoresInAWeek = this.scores.filter(x => x.season == season && x.weekNumber == week)
+          .sort(function (a, b) { return b.score - a.score });
+        if (scoresInAWeek.some(x => x.id == id)) {
+          var userScore = scoresInAWeek.filter(x => x.id == id)[0];
+          // 0 indexed ranking from lowest to highest
+          var scoreRankForTheWeek = scoresInAWeek.findIndex(x => x == userScore);
+          if (scoreRankForTheWeek == 0) {
+            weeksAtNumber1++;
+          }
+        }
+      }
+    }
+    return weeksAtNumber1;
+  }
 }

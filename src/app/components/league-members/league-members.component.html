@@ -42,6 +42,7 @@
 <p-dialog header="Individual Records" [(visible)]="showRecordWindow" [modal]="true" [style]="{width: '50vw'}"
           [draggable]="false" [resizable]="true" *ngIf="showRecordWindow">
   <h3>{{leagueMembers[records[0].id -1].firstname}} {{leagueMembers[records[0].id -1].lastname}}'s Overall Record: {{records[0].overAllRecord}}</h3>
+  <h3>Weeks with Highest Score: {{ weeksCount }}</h3>
   <p-table [value]="records" styleClass="p-datatable-striped white-text" responsiveLayout="scroll">
     <ng-template pTemplate="header">
       <tr>
@@ -51,7 +52,7 @@
     </ng-template>
     <ng-template pTemplate="body" let-record>
       <tr>
-        <td *ngIf="record.opponentId == 4; else notAgainstKenny"><a routerLink="/ForKenny">{{leagueMembers[record.opponentId -1].firstname}} {{leagueMembers[record.opponentId -1].lastname}}</a></td>
+        <td *ngIf="record.opponentId == 4; else notAgainstKenny"><a routerLink="/ForKenny" id="fix-kenny-style">{{leagueMembers[record.opponentId -1].firstname}} {{leagueMembers[record.opponentId -1].lastname}}</a></td>
         <ng-template #notAgainstKenny><td>{{leagueMembers[record.opponentId -1].firstname}} {{leagueMembers[record.opponentId -1].lastname}}</td></ng-template>
         <td>{{record.record}}</td>
       </tr>
