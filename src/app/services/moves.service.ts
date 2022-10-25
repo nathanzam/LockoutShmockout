@@ -137,14 +137,14 @@ export class MovesService {
     { id: 11, season: 2021, moves: 20, draft: 7 },
     { id: 17, season: 2021, moves: 31, draft: 5 },
     { id: 18, season: 2021, moves: 12, draft: 2 },
-    { id: 1, season: 2022, moves: 8, draft: 3 },
-    { id: 2, season: 2022, moves: 6, draft: 6 },
-    { id: 3, season: 2022, moves: 6, draft: 1 },
-    { id: 4, season: 2022, moves: 2, draft: 2 },
-    { id: 5, season: 2022, moves: 4, draft: 4 },
-    { id: 11, season: 2022, moves: 1, draft: 5 },
-    { id: 17, season: 2022, moves: 7, draft: 7 },
-    { id: 18, season: 2022, moves: 0, draft: 8 }
+    { id: 1, season: 2022, moves: 13, draft: 3 },
+    { id: 2, season: 2022, moves: 11, draft: 6 },
+    { id: 3, season: 2022, moves: 9, draft: 1 },
+    { id: 4, season: 2022, moves: 6, draft: 2 },
+    { id: 5, season: 2022, moves: 8, draft: 4 },
+    { id: 11, season: 2022, moves: 5, draft: 5 },
+    { id: 17, season: 2022, moves: 10, draft: 7 },
+    { id: 18, season: 2022, moves: 2, draft: 8 }
   ];
 
   getAllManagerMovesCount(): Moves[] {
