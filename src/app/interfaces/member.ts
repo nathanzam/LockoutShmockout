@@ -4,6 +4,7 @@ import { Draft } from './moves';
 
 export interface Member {
   id: number;
+  espnId: number;
   firstname: string;
   lastname: string;
   champion: string[];

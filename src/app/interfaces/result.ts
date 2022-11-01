@@ -14,4 +14,5 @@ export interface ResultNames {
   winningScore: number;
   losingScore: number;
   weekNumber: number;
+  winnerId: number;
 }

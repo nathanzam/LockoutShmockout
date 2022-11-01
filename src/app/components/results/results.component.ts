@@ -32,7 +32,8 @@ export class ResultsComponent implements OnInit {
         loserName: this.members[result.loserId - 1].firstname + ' ' + this.members[result.loserId - 1].lastname,
         winningScore: result.winningScore,
         losingScore: result.losingScore,
-        weekNumber: result.weekNumber
+        weekNumber: result.weekNumber,
+        winnerId: this.members[result.winnerId - 1].espnId
       }
       this.resultsWithNames.push(res);
     })
