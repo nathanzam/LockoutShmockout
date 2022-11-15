@@ -881,7 +881,11 @@ export class ResultsService {
     { season: 2022, winnerId: 18, loserId: 2, winningScore: 154.72, losingScore: 78, weekNumber: 9 },
     { season: 2022, winnerId: 5, loserId: 4, winningScore: 117.46, losingScore: 116.22, weekNumber: 9 },
     { season: 2022, winnerId: 17, loserId: 3, winningScore: 181.34, losingScore: 82.4, weekNumber: 9 },
-    { season: 2022, winnerId: 11, loserId: 1, winningScore: 142.66, losingScore: 139.16, weekNumber: 9 }
+    { season: 2022, winnerId: 11, loserId: 1, winningScore: 142.66, losingScore: 139.16, weekNumber: 9 },
+    { season: 2022, winnerId: 11, loserId: 18, winningScore: 153.48, losingScore: 152.72, weekNumber: 10 },
+    { season: 2022, winnerId: 17, loserId: 4, winningScore: 108, losingScore: 98.16, weekNumber: 10 },
+    { season: 2022, winnerId: 5, loserId: 2, winningScore: 134.4, losingScore: 128.56, weekNumber: 10 },
+    { season: 2022, winnerId: 3, loserId: 1, winningScore: 140.94, losingScore: 115.8, weekNumber: 10 }
   ];
 
   //{ season: 2022, winnerId: , loserId: , winningScore: , losingScore: , weekNumber:  },
