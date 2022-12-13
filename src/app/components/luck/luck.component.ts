@@ -41,7 +41,8 @@ export class LuckComponent implements OnInit {
     var seasonsWith8Teams = [2021, 2022];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     for (var season of seasons) {
-      if (season > 2020) {
+      //starting in 2020 regular season ended in week 14 instead of 13
+      if (season == 2020) {
         weeks.push(14);
       }
       for (var week of weeks) {
