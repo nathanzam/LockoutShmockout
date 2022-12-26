@@ -35,7 +35,7 @@ export class MemberService {
       teamname: ['Wichita, Kan. Bout Willis', 'Redskins Name Changing Assoc.', 'Every Day I\'m Russell\'n',
         'Isaiah Fisher\'s Stepdad', 'Make AMurrayca Great Again', 'DeMarcoroni And Cheese', 'Miami Guice',
         'Fantasy Football Team'],
-      playoffs: ['2011', '2012', '2014', '2017', '2020', '2021']
+      playoffs: ['2011', '2012', '2014', '2017', '2020', '2021', '2022']
     },
     {
       id: 5, espnId: 17, firstname: 'Kevin', lastname: 'Bandy', champion: ['2019', '2021'],
@@ -75,7 +75,7 @@ export class MemberService {
     {
       id: 11, espnId: 15, firstname: 'Korey', lastname: 'Schrock', champion: [],
       teamname: ['Master Mulatto', 'Paula Deen\'s Plantation'],
-      playoffs: ['2012', '2014', '2015', '2019', '2020']
+      playoffs: ['2012', '2014', '2015', '2019', '2020', '2022']
     },
     {
       id: 12, espnId: 6, firstname: 'Kameron', lastname: 'Chastain', champion: [],
@@ -105,13 +105,13 @@ export class MemberService {
     {
       id: 17, espnId: 18, firstname: 'Nikolas', lastname: 'Sachs', champion: [],
       teamname: ['Panama Diabolos Rojos', 'The Token Austrian', 'Forest City Explosive Trees', 'Get Buckets'],
-      playoffs: ['2014', '2015', '2016', '2017', '2019', '2020']
+      playoffs: ['2014', '2015', '2016', '2017', '2019', '2020', '2022']
     },
     {
-      id: 18, espnId: 20, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017'],
+      id: 18, espnId: 20, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017', '2022'],
       teamname: ['Gronkey Punch', 'Rawls in your Face', 'An InCAMvenient Truth', 'Johnson and Johnson', 'Two Browns One Kupp',
         'Jock Strap Kings', 'Dude Looks Like A Brady', 'Training Room Heroes'],
-      playoffs: ['2017', '2019', '2021']
+      playoffs: ['2017', '2019', '2021', '2022']
     },
     {
       id: 19, espnId: 19, firstname: 'Rebekah', lastname: 'Epley', champion: ['2020'],
