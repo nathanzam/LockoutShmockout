@@ -14,7 +14,7 @@ export class MemberService {
       id: 1, espnId: 1, firstname: 'David', lastname: 'Zamkov', champion: ['2011'],
       teamname: ['P-Mac Cat Hoarders', 'Afrikaan Starving Joos', 'The Zam Turn Yo Head n\' Kovs', 'DeeZ Nuts On Yo\' Chinzzzz',
         'Golden Tate of Mind', 'Cpt. Kirk and The Gurley Boys', 'Cool Brees Hits David\'s Johnson', 'Kittles- Taste The Asshole',
-        'Saquondered My Chance', 'Discount Deebo Check', 'League Killer'],
+        'Saquondered My Chance', 'Discount Deebo Check', 'League Killer','My Butker Hurts'],
       playoffs: ['2011', '2014', '2016', '2018', '2019', '2020']
     },
     {
@@ -110,7 +110,7 @@ export class MemberService {
     {
       id: 18, espnId: 20, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017', '2022'],
       teamname: ['Gronkey Punch', 'Rawls in your Face', 'An InCAMvenient Truth', 'Johnson and Johnson', 'Two Browns One Kupp',
-        'Jock Strap Kings', 'Dude Looks Like A Brady', 'Training Room Heroes'],
+        'Jock Strap Kings', 'Dude Looks Like A Brady', 'Training Room Heroes', '28-3 and Me', 'Give your Footballs a Tug'],
       playoffs: ['2017', '2019', '2021', '2022']
     },
     {

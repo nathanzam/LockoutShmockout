@@ -1791,7 +1791,31 @@ export class ScoreService {
     { season: 2022, id: 4, score: 124.46, weekNumber: 14 },
     { season: 2022, id: 11, score: 130.08, weekNumber: 14 },
     { season: 2022, id: 1, score: 84.02, weekNumber: 14 },
-    { season: 2022, id: 2, score: 123.58, weekNumber: 14 }
+    { season: 2022, id: 2, score: 123.58, weekNumber: 14 },
+    { season: 2023, id: 5, score: 116.36, weekNumber: 1 },
+    { season: 2023, id: 3, score: 95.34, weekNumber: 1 },
+    { season: 2023, id: 11, score: 155.12, weekNumber: 1 },
+    { season: 2023, id: 2, score: 152.76, weekNumber: 1 },
+    { season: 2023, id: 18, score: 111.54, weekNumber: 1 },
+    { season: 2023, id: 4, score: 93, weekNumber: 1 },
+    { season: 2023, id: 17, score: 80.22, weekNumber: 1 },
+    { season: 2023, id: 1, score: 113.44, weekNumber: 1 },
+    { season: 2023, id: 18, score: 160.52, weekNumber: 2 },
+    { season: 2023, id: 4, score: 124.32, weekNumber: 2 },
+    { season: 2023, id: 17, score: 114.74, weekNumber: 2 },
+    { season: 2023, id: 1, score: 150.48, weekNumber: 2 },
+    { season: 2023, id: 2, score: 125.58, weekNumber: 2 },
+    { season: 2023, id: 5, score: 117.8, weekNumber: 2 },
+    { season: 2023, id: 3, score: 111.94, weekNumber: 2 },
+    { season: 2023, id: 11, score: 136.26, weekNumber: 2 },
+    { season: 2023, id: 18, score: 126.3, weekNumber: 3 },
+    { season: 2023, id: 4, score: 144.94, weekNumber: 3 },
+    { season: 2023, id: 5, score: 169.08, weekNumber: 3 },
+    { season: 2023, id: 1, score: 171.5, weekNumber: 3 },
+    { season: 2023, id: 11, score: 111.4, weekNumber: 3 },
+    { season: 2023, id: 17, score: 127.88, weekNumber: 3 },
+    { season: 2023, id: 2, score: 146.4, weekNumber: 3 },
+    { season: 2023, id: 3, score: 121.36, weekNumber: 3 }
   ]
 
   getScores(): Score[] {
