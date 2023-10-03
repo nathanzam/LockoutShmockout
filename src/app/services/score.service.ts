@@ -1815,7 +1815,15 @@ export class ScoreService {
     { season: 2023, id: 11, score: 111.4, weekNumber: 3 },
     { season: 2023, id: 17, score: 127.88, weekNumber: 3 },
     { season: 2023, id: 2, score: 146.4, weekNumber: 3 },
-    { season: 2023, id: 3, score: 121.36, weekNumber: 3 }
+    { season: 2023, id: 3, score: 121.36, weekNumber: 3 },
+    { season: 2023, id: 18, score: 143.86, weekNumber: 4 },
+    { season: 2023, id: 4, score: 137.44, weekNumber: 4 },
+    { season: 2023, id: 1, score: 140.24, weekNumber: 4 },
+    { season: 2023, id: 11, score: 153.58, weekNumber: 4 },
+    { season: 2023, id: 3, score: 113.64, weekNumber: 4 },
+    { season: 2023, id: 2, score: 114.26, weekNumber: 4 },
+    { season: 2023, id: 17, score: 73.9, weekNumber: 4 },
+    { season: 2023, id: 5, score: 89.6, weekNumber: 4 }
   ]
 
   getScores(): Score[] {
