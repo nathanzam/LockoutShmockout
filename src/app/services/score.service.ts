@@ -1829,7 +1829,7 @@ export class ScoreService {
     { season: 2023, id: 2, score: 150.6, weekNumber: 5 },
     { season: 2023, id: 3, score: 131.24, weekNumber: 5 },
     { season: 2023, id: 18, score: 112.02, weekNumber: 5 },
-    { season: 2023, id: 1, score: 125.54, weekNumber: 5 },
+    { season: 2023, id: 1, score: 126.54, weekNumber: 5 },
     { season: 2023, id: 11, score: 128.36, weekNumber: 5 },
     { season: 2023, id: 5, score: 98, weekNumber: 5 }
   ]

@@ -919,7 +919,7 @@ export class ResultsService {
     { season: 2023, winnerId: 1, loserId: 17, winningScore: 140.24, losingScore: 73.9, weekNumber: 4 },
     { season: 2023, winnerId: 11, loserId: 5, winningScore: 153.58, losingScore: 89.6, weekNumber: 4 },
     { season: 2023, winnerId: 17, loserId: 18, winningScore: 175.9, losingScore: 112.02, weekNumber: 5 },
-    { season: 2023, winnerId: 4, loserId: 1, winningScore: 126.42, losingScore: 125.54, weekNumber: 5 },
+    { season: 2023, winnerId: 1, loserId: 4, winningScore: 126.54, losingScore: 126.42, weekNumber: 5 },
     { season: 2023, winnerId: 2, loserId: 11, winningScore: 150.6, losingScore: 128.36, weekNumber: 5 },
     { season: 2023, winnerId: 3, loserId: 5, winningScore: 131.24, losingScore: 98, weekNumber: 5 }//,
     //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 6 },
