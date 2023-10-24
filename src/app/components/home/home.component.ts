@@ -11,6 +11,8 @@ import { TableModule, Table } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
 import { SelectItem, SortEvent } from 'primeng/api';
 import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +24,11 @@ export class HomeComponent implements OnInit {
   members: Member[] = [];
   results: Result[] = [];
   scores: Score[] = [];
+  showRecordWindow: boolean = false;
+  weeksCount: number = 0;
+  records: Result[] = [];
   summaries: Summary[] = [];
+  summary: any;
   season: number = 2023;
   seasons: SelectItem[] = [
     { label: '2023', value: 2023 },
@@ -110,6 +116,14 @@ export class HomeComponent implements OnInit {
 
       return (event.order! * result);
     })
+  }
+
+  showRecords(id: number): void {
+    this.showRecordWindow = true;
+    this.records = this.results.filter(x => x.season == this.season && (x.winnerId == id || x.loserId == id)).sort(x => x.weekNumber);
+    this.summary = this.summaries.filter(x => x.id == id)[0];
+    var someNumber = this.resultService.getWeeksAgainstNumber1Scorer(id).filter(x => x.season == this.season)[0];
+    this.weeksCount = someNumber.count;
   }
 
   clear(table: Table) {

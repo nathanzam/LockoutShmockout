@@ -12,8 +12,7 @@
   </ng-template>
   <ng-template pTemplate="body" let-member>
     <tr>
-      <td *ngIf="member.name == 'Kenny Crapse'; else notKenny"><a routerLink="/ForKenny">{{member.name}}</a></td>
-      <ng-template #notKenny><td>{{member.name}}</td></ng-template>
+      <td>{{member.name}}</td>
       <td>{{member.luckyWins}}</td>
       <td>{{member.unluckyLosses}}</td>
       <td><div *ngFor="let week of member.luckyWeeks"><span>{{week.season}}: week {{week.weekNumber}}</span></div></td>

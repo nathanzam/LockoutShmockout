@@ -13,8 +13,8 @@
   </ng-template>
   <ng-template pTemplate="body" let-summary>
     <tr *ngIf="summary.wins != 0 || summary.losses != 0">
-      <td *ngIf="summary.id == 4; else notKenny"><a routerLink="/ForKenny">{{members[summary.id - 1].firstname}} {{members[summary.id - 1].lastname}}</a></td>
-      <ng-template #notKenny><td>{{members[summary.id - 1].firstname}} {{members[summary.id - 1].lastname}}</td></ng-template>
+      <td><p-button icon="pi pi-external-link" label="{{members[summary.id - 1].firstname}} {{members[summary.id - 1].lastname}}" styleClass="p-button-warning"
+                    (onClick)="showRecords(summary.id)"></p-button></td>
       <td>{{summary.totalPoints | number: '1.0-2'}}</td>
       <td>{{summary.totalAgainst | number: '1.0-2'}}</td>
       <td *ngIf="summary.champion; else notChamp">{{summary.wins}} - {{summary.losses}} <img src="../../assets/trophy.png" style="height: 2em" /></td>
@@ -24,4 +24,34 @@
     </tr>
   </ng-template>
 </p-table>
-
+<p-dialog header="Individual Records" [(visible)]="showRecordWindow" [modal]="true" [style]="{width: '50vw'}"
+          [draggable]="false" [resizable]="true" *ngIf="showRecordWindow">
+  <h3>{{members[summary.id -1].firstname}} {{members[summary.id -1].lastname}}'s Overall Record: {{summary.wins}} - {{summary.losses}}</h3>
+  <h3>Weeks Against Highest Score: {{ weeksCount }}</h3>
+  <p-table [value]="records" styleClass="p-datatable-striped white-text" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Opponent</th>
+        <th>Result</th>
+        <th>Score</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-record>
+      <tr *ngIf="record.winnerId == summary.id; else loser">
+        <td>{{members[record.loserId -1].firstname}} {{members[record.loserId -1].lastname}}</td>
+        <td>W</td>
+        <td>{{record.winningScore}} - {{record.losingScore}}</td>
+      </tr>
+      <ng-template #loser>
+        <tr>
+          <td>{{members[record.winnerId -1].firstname}} {{members[record.winnerId -1].lastname}}</td>
+          <td>L</td>
+          <td>{{record.losingScore}} - {{record.winningScore}}</td>
+        </tr>
+      </ng-template>
+    </ng-template>
+  </p-table>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-times" (click)="showRecordWindow=false" label="Close" styleClass="p-button-text"></p-button>
+  </ng-template>
+</p-dialog>

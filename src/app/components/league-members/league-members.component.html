@@ -19,19 +19,15 @@
       <ng-template #noChamp>Never Won</ng-template>
       <td><div *ngFor="let draft of member.draft"><span>{{draft.season}}: {{draft.draft}}</span></div></td>
       <td>
-        <div *ngIf="member.best.winnerId == 4; else notKennyWinner">Winner: <a routerLink="/ForKenny">{{leagueMembers[member.best.winnerId -1].firstname}} {{leagueMembers[member.best.winnerId -1].lastname}}</a></div>
-        <ng-template #notKennyWinner><div>Winner: {{leagueMembers[member.best.winnerId -1].firstname}} {{leagueMembers[member.best.winnerId -1].lastname}}</div></ng-template>
-        <div *ngIf="member.best.loserId == 4; else notKennyLoser"><a routerLink="/ForKenny">Loser: {{leagueMembers[member.best.loserId -1].firstname}} {{leagueMembers[member.best.loserId -1].lastname}}</a></div>
-        <ng-template #notKennyLoser><div>Loser: {{leagueMembers[member.best.loserId -1].firstname}} {{leagueMembers[member.best.loserId -1].lastname}}</div></ng-template>
+        <div>Winner: {{leagueMembers[member.best.winnerId -1].firstname}} {{leagueMembers[member.best.winnerId -1].lastname}}</div>
+        <div>Loser: {{leagueMembers[member.best.loserId -1].firstname}} {{leagueMembers[member.best.loserId -1].lastname}}</div>
         <div>Score: {{member.best.winningScore}} - {{member.best.losingScore}}</div>
         <div>Season: {{member.best.season}}</div>
         <div>Week: {{member.best.weekNumber}}</div>
       </td>
       <td>
-        <div *ngIf="member.worst.winnerId == 4; else notKennyWorstWinner">Winner: <a routerLink="/ForKenny">{{leagueMembers[member.worst.winnerId -1].firstname}} {{leagueMembers[member.worst.winnerId -1].lastname}}</a></div>
-        <ng-template #notKennyWorstWinner><div>Winner: {{leagueMembers[member.worst.winnerId -1].firstname}} {{leagueMembers[member.worst.winnerId -1].lastname}}</div></ng-template>
-        <div *ngIf="member.worst.loserId == 4; else notKennyWorstLoser">Loser: <a routerLink="/ForKenny">{{leagueMembers[member.worst.loserId -1].firstname}} {{leagueMembers[member.worst.loserId -1].lastname}}</a></div>
-        <ng-template #notKennyWorstLoser><div>Loser: {{leagueMembers[member.worst.loserId -1].firstname}} {{leagueMembers[member.worst.loserId -1].lastname}}</div></ng-template>
+        <div>Winner: {{leagueMembers[member.worst.winnerId -1].firstname}} {{leagueMembers[member.worst.winnerId -1].lastname}}</div>
+        <div>Loser: {{leagueMembers[member.worst.loserId -1].firstname}} {{leagueMembers[member.worst.loserId -1].lastname}}</div>
   <div>Score: {{member.worst.winningScore}} - {{member.worst.losingScore}}</div>
   <div>Season: {{member.worst.season}}</div>
   <div>Week: {{member.worst.weekNumber}}</div>
@@ -52,8 +48,7 @@
     </ng-template>
     <ng-template pTemplate="body" let-record>
       <tr>
-        <td *ngIf="record.opponentId == 4; else notAgainstKenny"><a routerLink="/ForKenny" id="fix-kenny-style">{{leagueMembers[record.opponentId -1].firstname}} {{leagueMembers[record.opponentId -1].lastname}}</a></td>
-        <ng-template #notAgainstKenny><td>{{leagueMembers[record.opponentId -1].firstname}} {{leagueMembers[record.opponentId -1].lastname}}</td></ng-template>
+        <td>{{leagueMembers[record.opponentId -1].firstname}} {{leagueMembers[record.opponentId -1].lastname}}</td>
         <td>{{record.record}}</td>
       </tr>
     </ng-template>

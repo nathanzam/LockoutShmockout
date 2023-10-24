@@ -21,7 +21,6 @@ import { MemberService } from './services/member-service.service';
 import { MovesService } from './services/moves.service';
 import { ResultsService } from './services/results.service';
 import { LuckComponent } from './components/luck/luck.component';
-import { CarrieComponent } from './components/carrie/carrie.component';
 import { OuchComponent } from './components/ouch/ouch.component';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { OuchComponent } from './components/ouch/ouch.component';
     HomeComponent,
     ResultsComponent,
     LuckComponent,
-    CarrieComponent,
     OuchComponent
   ],
   imports: [

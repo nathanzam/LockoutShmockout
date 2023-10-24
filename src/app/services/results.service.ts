@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Result } from '../interfaces/result';
 import { UserRecord } from '../interfaces/record';
+import { UnluckyRecord } from '../interfaces/unlucky-record';
 
 @Injectable({
   providedIn: 'root'
@@ -925,11 +926,11 @@ export class ResultsService {
     { season: 2023, winnerId: 1, loserId: 18, winningScore: 155.88, losingScore: 96.94, weekNumber: 6 },
     { season: 2023, winnerId: 4, loserId: 11, winningScore: 116.94, losingScore: 105.06, weekNumber: 6 },
     { season: 2023, winnerId: 2, loserId: 3, winningScore: 128.66, losingScore: 118.34, weekNumber: 6 },
-    { season: 2023, winnerId: 5, loserId: 17, winningScore: 115.52, losingScore: 75.46, weekNumber: 6 }//,
-    //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 7 },
-    //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 7 },
-    //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 7 },
-    //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 7 },
+    { season: 2023, winnerId: 5, loserId: 17, winningScore: 115.52, losingScore: 75.46, weekNumber: 6 },
+    { season: 2023, winnerId: 4, loserId: 18, winningScore: 169.46, losingScore: 106.4, weekNumber: 7 },
+    { season: 2023, winnerId: 11, loserId: 3, winningScore: 118.62, losingScore: 115.96, weekNumber: 7 },
+    { season: 2023, winnerId: 1, loserId: 5, winningScore: 116.8, losingScore: 109.82, weekNumber: 7 },
+    { season: 2023, winnerId: 2, loserId: 17, winningScore: 138.36, losingScore: 131.24, weekNumber: 7 }//,
     //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 8 },
     //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 8 },
     //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber: 8 },
@@ -974,6 +975,22 @@ export class ResultsService {
     return this.results.filter(x => x.season == season && x.weekNumber == week && (x.winnerId == id || x.loserId == id))[0];
   }
 
+  getHighScorerTheWeek(season: number, week: number): number {
+    if (this.results.filter(x => x.season == season && x.weekNumber == week).length > 0) {
+      var highMatch = this.results.filter(x => x.season == season && x.weekNumber == week).sort((x1, x2) => {
+        if (x1.winningScore > x2.winningScore) {
+          return -1;
+        }
+        else if (x1.winningScore < x2.winningScore) {
+          return 1;
+        }
+        return 0;
+      })[0];
+      return highMatch.winnerId;
+    }
+    return -1;
+  }
+
   getTotalPointsAgainst(id: number, season: number): number {
     var total = 0;
     var losses = this.results.filter(x => x.loserId == id && x.season == season);
@@ -1006,6 +1023,32 @@ export class ResultsService {
         };
         recordsArray.push(record);
       }      
+    }
+    return recordsArray;
+  }
+
+  getWeeksAgainstNumber1Scorer(id: number): UnluckyRecord[] {
+    var recordsArray = [];
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+    var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    for (var season of seasons) {
+      var count = 0;
+      if (season > 2020 && weeks.length == 13) {
+        weeks.push(14);
+      }
+      for (var week of weeks) {
+        var highScorer = this.getHighScorerTheWeek(season, week);
+        var weekResult = this.getResultBySeasonWeekAndManager(id, season, week);
+        if (weekResult != null && weekResult.loserId == id && weekResult.winnerId == highScorer) {
+          count++;
+        }
+      }
+      var record: UnluckyRecord = {
+        id: id,
+        season: season,
+        count: count
+      };
+      recordsArray.push(record);
     }
     return recordsArray;
   }
