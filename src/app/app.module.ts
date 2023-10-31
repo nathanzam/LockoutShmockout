@@ -22,6 +22,7 @@ import { MovesService } from './services/moves.service';
 import { ResultsService } from './services/results.service';
 import { LuckComponent } from './components/luck/luck.component';
 import { OuchComponent } from './components/ouch/ouch.component';
+import { ExtraWinsComponent } from './components/extra-wins/extra-wins.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { OuchComponent } from './components/ouch/ouch.component';
     HomeComponent,
     ResultsComponent,
     LuckComponent,
-    OuchComponent
+    OuchComponent,
+    ExtraWinsComponent
   ],
   imports: [
     BrowserModule,

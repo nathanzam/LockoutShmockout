@@ -9,3 +9,8 @@ export interface Summary {
   draft: number;
   champion: boolean;
 }
+
+export interface Extra {
+  wins: number;
+  losses: number;
+}
