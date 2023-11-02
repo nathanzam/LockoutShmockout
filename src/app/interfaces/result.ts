@@ -16,3 +16,13 @@ export interface ResultNames {
   weekNumber: number;
   winnerId: number;
 }
+
+export interface AltResult {
+  season: number;
+  winnerId: number;
+  loserId: number;
+  winningScore: number;
+  losingScore: number;
+  weekNumber: number;
+  topHalf: boolean;
+}

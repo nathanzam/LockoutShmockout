@@ -122,8 +122,8 @@ export class HomeComponent implements OnInit {
     this.showRecordWindow = true;
     this.records = this.results.filter(x => x.season == this.season && (x.winnerId == id || x.loserId == id)).sort(x => x.weekNumber);
     this.summary = this.summaries.filter(x => x.id == id)[0];
-    var someNumber = this.resultService.getWeeksAgainstNumber1Scorer(id).filter(x => x.season == this.season)[0];
-    this.weeksCount = someNumber.count;
+    var topScorerOpponentCount = this.resultService.getWeeksAgainstNumber1Scorer(id).filter(x => x.season == this.season)[0];
+    this.weeksCount = topScorerOpponentCount.count;
   }
 
   clear(table: Table) {

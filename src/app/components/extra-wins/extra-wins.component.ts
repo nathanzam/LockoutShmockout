@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../../interfaces/member';
-import { Result, ResultNames } from '../../interfaces/result';
+import { Result, AltResult } from '../../interfaces/result';
 import { Score } from '../../interfaces/score';
 import { Summary, Extra } from '../../interfaces/summary';
 import { MemberService } from '../../services/member-service.service';
@@ -26,7 +26,7 @@ export class ExtraWinsComponent implements OnInit {
   scores: Score[] = [];
   showRecordWindow: boolean = false;
   weeksCount: number = 0;
-  records: Result[] = [];
+  records: AltResult[] = [];
   summaries: Summary[] = [];
   summary: any;
   season: number = 2023;
@@ -115,7 +115,6 @@ export class ExtraWinsComponent implements OnInit {
   }
 
   calculateExtraRecords(personId: number): Extra {
-    var seasonsWith8Teams = [2021, 2022, 2023];
     let extra: Extra = {
       wins: 0,
       losses: 0
@@ -125,32 +124,64 @@ export class ExtraWinsComponent implements OnInit {
       weeks.push(14);
     }
     for (var week of weeks) {
-      var resultsInAWeek = this.results.filter(x => x.season == this.season && x.weekNumber == week);
-      //sorted scores from lowest to highest
-      var scoresInAWeek = this.scores.filter(x => x.season == this.season && x.weekNumber == week)
-        .sort(function (a, b) { return a.score - b.score });
-      if (scoresInAWeek.some(x => x.id == personId)) {
-        var userScore = scoresInAWeek.filter(x => x.id == personId)[0];
-        // 0 indexed ranking from lowest to highest
-        var scoreRankForTheWeek = scoresInAWeek.findIndex(x => x == userScore);
-        // scoring 7th or worse in 12 team league
-        if (!seasonsWith8Teams.includes(this.season) && scoreRankForTheWeek < 6) {
+      if (this.scores.filter(x => x.season == this.season && x.weekNumber == week && x.id == personId).length != 0) {
+        if(this.calculateTopHalf(personId, week, this.season)) {
+          extra.wins += 1
+        }
+        else {
           extra.losses += 1;
-        }
-        // scoring 5th or worse in 8 team league
-        else if (seasonsWith8Teams.includes(this.season) && scoreRankForTheWeek < 4) {
-          extra.losses += 1;
-        }
-        // scoring 6th or better in 12 team league
-        else if (!seasonsWith8Teams.includes(this.season) && scoreRankForTheWeek > 5) {
-          extra.wins += 1;
-        }
-        // scoring 4th or better in 8 team league
-        else if (seasonsWith8Teams.includes(this.season) && scoreRankForTheWeek > 3) {
-          extra.wins += 1;
         }
       }
     }
     return extra;
+  }
+
+  calculateAltRecords(id: number): AltResult[] {
+    var altResults: AltResult[] = [];
+    var records = this.results.filter(x => x.season == this.season && (x.winnerId == id || x.loserId == id)).sort(x => x.weekNumber);
+    for (var record of records) {
+      let alt: AltResult = {
+        season: record.season,
+        winnerId: record.winnerId,
+        loserId: record.loserId,
+        winningScore: record.winningScore,
+        losingScore: record.losingScore,
+        weekNumber: record.weekNumber,
+        topHalf: this.calculateTopHalf(id, record.weekNumber, record.season)
+      };
+      altResults.push(alt);
+    }
+    return altResults;
+  }
+
+  calculateTopHalf(id: number, week: number, season: number): boolean {
+    var topHalfResult = false;
+    var seasonsWith8Teams = [2021, 2022, 2023];
+    var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    if (this.season > 2020) {
+      weeks.push(14);
+    }
+    var scoresInAWeek = this.scores.filter(x => x.season == season && x.weekNumber == week)
+      .sort(function (a, b) { return a.score - b.score });
+    var userScore = scoresInAWeek.filter(x => x.id == id)[0];
+    // 0 indexed ranking from lowest to highest
+    var scoreRankForTheWeek = scoresInAWeek.findIndex(x => x == userScore);
+    // scoring 6th or better in 12 team league
+    if (!seasonsWith8Teams.includes(this.season) && scoreRankForTheWeek > 5) {
+      topHalfResult = true;
+    }
+    // scoring 4th or better in 8 team league
+    else if (seasonsWith8Teams.includes(this.season) && scoreRankForTheWeek > 3) {
+      topHalfResult = true;
+    }
+    return topHalfResult;
+  }
+
+  showRecords(id: number): void {
+    this.showRecordWindow = true;
+    this.records = this.calculateAltRecords(id);
+    this.summary = this.summaries.filter(x => x.id == id)[0];
+    var topScorerOpponentCount = this.resultService.getWeeksAgainstNumber1Scorer(id).filter(x => x.season == this.season)[0];
+    this.weeksCount = topScorerOpponentCount.count;
   }
 }
