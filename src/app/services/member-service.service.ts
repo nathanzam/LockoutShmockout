@@ -15,27 +15,27 @@ export class MemberService {
       teamname: ['P-Mac Cat Hoarders', 'Afrikaan Starving Joos', 'The Zam Turn Yo Head n\' Kovs', 'DeeZ Nuts On Yo\' Chinzzzz',
         'Golden Tate of Mind', 'Cpt. Kirk and The Gurley Boys', 'Cool Brees Hits David\'s Johnson', 'Kittles- Taste The Asshole',
         'Saquondered My Chance', 'Discount Deebo Check', 'League Killer','My Butker Hurts', 'I Shaved My Balls For This?'],
-      playoffs: ['2011', '2014', '2016', '2018', '2019', '2020']
+      playoffs: ['2011', '2014', '2016', '2018', '2019', '2020', '2023']
     },
     {
-      id: 2, espnId: 10, firstname: 'Chad', lastname: 'Oglesby', champion: ['2012', '2016'],
+      id: 2, espnId: 10, firstname: 'Chad', lastname: 'Oglesby', champion: ['2012', '2016', '2023'],
       teamname: ['Drink til the Pink Dont Stink', 'Bob Loblaw\'s Law Bloggers', 'Muff Huckers', 'Michael Sam\'s Cleatsssss',
         'Taint Taco Aficionado', 'Zeke and Bell Rollin Blounts', 'Shat the Bed'],
-      playoffs: ['2011', '2012', '2013', '2016']
+      playoffs: ['2011', '2012', '2013', '2016', '2023']
     },
     {
       id: 3, espnId: 8, firstname: 'Peyton', lastname: 'Bobo', champion: ['2013', '2014', '2018'],
       teamname: ['Neverland Lost Boys', 'Texas Lone Ranger', 'Ridgemont High Bad Teacher', 'Baaaadaaaass G.O.A.T.',
         'Thoughts from Willy Wonka', 'Yellow Rose of Texas', 'Hanging with Mr. Bobo', 'Cooper? More Like Pooper',
-        'Got Me A Little Chubby', 'Feb 2nd × Idiot = COVID', 'Something TBD', 'Girl Dad AKA Daddyman'],
-      playoffs: ['2011', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021']
+        'Got Me A Little Chubby', 'Feb 2nd × Idiot = COVID', 'Something TBD', 'Girl Dad AKA Daddyman', 'Worst Team Name Ever'],
+      playoffs: ['2011', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021', '2023']
     },
     {
       id: 4, espnId: 2, firstname: 'Kenny', lastname: 'Crapse', champion: [],
       teamname: ['Wichita, Kan. Bout Willis', 'Redskins Name Changing Assoc.', 'Every Day I\'m Russell\'n',
         'Isaiah Fisher\'s Stepdad', 'Make AMurrayca Great Again', 'DeMarcoroni And Cheese', 'Miami Guice',
         'Fantasy Football Team'],
-      playoffs: ['2011', '2012', '2014', '2017', '2020', '2021', '2022']
+      playoffs: ['2011', '2012', '2014', '2017', '2020', '2021', '2022', '2023']
     },
     {
       id: 5, espnId: 17, firstname: 'Kevin', lastname: 'Bandy', champion: ['2019', '2021'],
