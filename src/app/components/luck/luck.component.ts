@@ -37,8 +37,8 @@ export class LuckComponent implements OnInit {
     var luckyWeeks: Score[] = [];
     var unluckyWeeks: Score[] = [];
     var manager = this.members[id - 1].firstname + ' ' + this.members[id - 1].lastname;
-    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
-    var seasonsWith8Teams = [2021, 2022, 2023];
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+    var seasonsWith8Teams = [2021, 2022, 2023, 2024];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     for (var season of seasons) {
       //starting in 2020 regular season ended in week 14 instead of 13

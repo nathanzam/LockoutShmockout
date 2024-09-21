@@ -14,7 +14,8 @@ export class MemberService {
       id: 1, espnId: 1, firstname: 'David', lastname: 'Zamkov', champion: ['2011'],
       teamname: ['P-Mac Cat Hoarders', 'Afrikaan Starving Joos', 'The Zam Turn Yo Head n\' Kovs', 'DeeZ Nuts On Yo\' Chinzzzz',
         'Golden Tate of Mind', 'Cpt. Kirk and The Gurley Boys', 'Cool Brees Hits David\'s Johnson', 'Kittles- Taste The Asshole',
-        'Saquondered My Chance', 'Discount Deebo Check', 'League Killer','My Butker Hurts', 'I Shaved My Balls For This?'],
+        'Saquondered My Chance', 'Discount Deebo Check', 'League Killer', 'My Butker Hurts', 'I Shaved My Balls For This?',
+        'Vaccines Give You Autism'],
       playoffs: ['2011', '2014', '2016', '2018', '2019', '2020', '2023']
     },
     {

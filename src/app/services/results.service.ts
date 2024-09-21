@@ -958,10 +958,18 @@ export class ResultsService {
     { season: 2023, winnerId: 4, loserId: 18, winningScore: 136.16, losingScore: 109.52, weekNumber: 14 },
     { season: 2023, winnerId: 3, loserId: 11, winningScore: 127.04, losingScore: 78.76, weekNumber: 14 },
     { season: 2023, winnerId: 1, loserId: 5, winningScore: 127.38, losingScore: 89.48, weekNumber: 14 },
-    { season: 2023, winnerId: 17, loserId: 2, winningScore: 128.52, losingScore: 126.26, weekNumber: 14 }
+    { season: 2023, winnerId: 17, loserId: 2, winningScore: 128.52, losingScore: 126.26, weekNumber: 14 },
+    { season: 2024, winnerId: 5, loserId: 18, winningScore: 120.48, losingScore: 107.4, weekNumber: 1 },
+    { season: 2024, winnerId: 3, loserId: 4, winningScore: 119.28, losingScore: 92.76, weekNumber: 1 },
+    { season: 2024, winnerId: 17, loserId: 11, winningScore: 173.76, losingScore: 127.8, weekNumber: 1 },
+    { season: 2024, winnerId: 1, loserId: 2, winningScore: 154.14, losingScore: 122.72, weekNumber: 1 },
+    { season: 2024, winnerId: 18, loserId: 2, winningScore: 146.94, losingScore: 140.52, weekNumber: 2 },
+    { season: 2024, winnerId: 5, loserId: 4, winningScore: 147.5, losingScore: 143.56, weekNumber: 2 },
+    { season: 2024, winnerId: 17, loserId: 3, winningScore: 123.28, losingScore: 94.2, weekNumber: 2 },
+    { season: 2024, winnerId: 11, loserId: 1, winningScore: 144.8, losingScore: 142.86, weekNumber: 2 }
   ];
 
-  //{ season: 2023, winnerId: , loserId: , winningScore: , losingScore: , weekNumber:  },
+  //{ season: 2024, winnerId: , loserId: , winningScore: , losingScore: , weekNumber:  },
 
   getResults(): Result[] {
     return this.results;
@@ -1029,7 +1037,7 @@ export class ResultsService {
 
   getWeeksAgainstNumber1Scorer(id: number): UnluckyRecord[] {
     var recordsArray = [];
-    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     for (var season of seasons) {
       var count = 0;

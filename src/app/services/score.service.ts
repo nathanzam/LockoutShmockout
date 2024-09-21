@@ -1903,7 +1903,23 @@ export class ScoreService {
     { season: 2023, id: 18, score: 109.52, weekNumber: 14 },
     { season: 2023, id: 11, score: 78.76, weekNumber: 14 },
     { season: 2023, id: 5, score: 89.48, weekNumber: 14 },
-    { season: 2023, id: 2, score: 126.26, weekNumber: 14 }
+    { season: 2023, id: 2, score: 126.26, weekNumber: 14 },
+    { season: 2024, id: 5, score: 120.48, weekNumber: 1 },
+    { season: 2024, id: 3, score: 119.28, weekNumber: 1 },
+    { season: 2024, id: 17, score: 173.76, weekNumber: 1 },
+    { season: 2024, id: 1, score: 154.14, weekNumber: 1 },
+    { season: 2024, id: 18, score: 107.4, weekNumber: 1 },
+    { season: 2024, id: 4, score: 92.76, weekNumber: 1 },
+    { season: 2024, id: 11, score: 127.8, weekNumber: 1 },
+    { season: 2024, id: 2, score: 122.72, weekNumber: 1 },
+    { season: 2024, id: 18, score: 146.94, weekNumber: 2 },
+    { season: 2024, id: 5, score: 147.5, weekNumber: 2 },
+    { season: 2024, id: 17, score: 123.28, weekNumber: 2 },
+    { season: 2024, id: 11, score: 144.8, weekNumber: 2 },
+    { season: 2024, id: 2, score: 140.52, weekNumber: 2 },
+    { season: 2024, id: 4, score: 143.56, weekNumber: 2 },
+    { season: 2024, id: 3, score: 94.2, weekNumber: 2 },
+    { season: 2024, id: 1, score: 142.86, weekNumber: 2 }
   ]
 
   getScores(): Score[] {
@@ -1930,7 +1946,7 @@ export class ScoreService {
 
   getTotalWeeksWithHighestScore(id: number): number {
     var weeksAtNumber1 = 0;
-    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     for (var season of seasons) {
       if (season > 2020) {
