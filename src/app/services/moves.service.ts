@@ -153,7 +153,7 @@ export class MovesService {
     { id: 11, season: 2023, moves: 19, draft: 4 },
     { id: 17, season: 2023, moves: 28, draft: 2 },
     { id: 18, season: 2023, moves: 12, draft: 5 },
-    { id: 1, season: 2024, moves: 3, draft: 8 },
+    { id: 1, season: 2024, moves: 5, draft: 8 },
     { id: 2, season: 2024, moves: 3, draft: 3 },
     { id: 3, season: 2024, moves: 0, draft: 6 },
     { id: 4, season: 2024, moves: 0, draft: 2 },

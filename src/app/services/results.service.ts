@@ -966,7 +966,11 @@ export class ResultsService {
     { season: 2024, winnerId: 18, loserId: 2, winningScore: 146.94, losingScore: 140.52, weekNumber: 2 },
     { season: 2024, winnerId: 5, loserId: 4, winningScore: 147.5, losingScore: 143.56, weekNumber: 2 },
     { season: 2024, winnerId: 17, loserId: 3, winningScore: 123.28, losingScore: 94.2, weekNumber: 2 },
-    { season: 2024, winnerId: 11, loserId: 1, winningScore: 144.8, losingScore: 142.86, weekNumber: 2 }
+    { season: 2024, winnerId: 11, loserId: 1, winningScore: 144.8, losingScore: 142.86, weekNumber: 2 },
+    { season: 2024, winnerId: 11, loserId: 18, winningScore: 174.64, losingScore: 120.9, weekNumber: 3 },
+    { season: 2024, winnerId: 4, loserId: 17, winningScore: 140.62, losingScore: 98.2, weekNumber: 3 },
+    { season: 2024, winnerId: 5, loserId: 2, winningScore: 146.44, losingScore: 124.52, weekNumber: 3 },
+    { season: 2024, winnerId: 1, loserId: 3, winningScore: 142.34, losingScore: 102.3, weekNumber: 3 }
   ];
 
   //{ season: 2024, winnerId: , loserId: , winningScore: , losingScore: , weekNumber:  },

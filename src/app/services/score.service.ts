@@ -1919,7 +1919,15 @@ export class ScoreService {
     { season: 2024, id: 2, score: 140.52, weekNumber: 2 },
     { season: 2024, id: 4, score: 143.56, weekNumber: 2 },
     { season: 2024, id: 3, score: 94.2, weekNumber: 2 },
-    { season: 2024, id: 1, score: 142.86, weekNumber: 2 }
+    { season: 2024, id: 1, score: 142.86, weekNumber: 2 },
+    { season: 2024, id: 11,score: 174.64, weekNumber: 3 },
+    { season: 2024, id: 4, score: 140.62, weekNumber: 3 },
+    { season: 2024, id: 5, score: 146.44, weekNumber: 3 },
+    { season: 2024, id: 1, score: 142.34, weekNumber: 3 },
+    { season: 2024, id: 18, score: 120.9, weekNumber: 3 },
+    { season: 2024, id: 17, score: 98.2, weekNumber: 3 },
+    { season: 2024, id: 2, score: 124.52, weekNumber: 3 },
+    { season: 2024, id: 3, score: 102.3, weekNumber: 3 }
   ]
 
   getScores(): Score[] {
