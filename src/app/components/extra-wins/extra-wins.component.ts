@@ -157,7 +157,7 @@ export class ExtraWinsComponent implements OnInit {
 
   calculateTopHalf(id: number, week: number, season: number): boolean {
     var topHalfResult = false;
-    var seasonsWith8Teams = [2021, 2022, 2023];
+    var seasonsWith8Teams = [2021, 2022, 2023,2024];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     if (this.season > 2020) {
       weeks.push(14);
