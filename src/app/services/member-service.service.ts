@@ -16,7 +16,7 @@ export class MemberService {
         'Golden Tate of Mind', 'Cpt. Kirk and The Gurley Boys', 'Cool Brees Hits David\'s Johnson', 'Kittles- Taste The Asshole',
         'Saquondered My Chance', 'Discount Deebo Check', 'League Killer', 'My Butker Hurts', 'I Shaved My Balls For This?',
         'Vaccines Give You Autism'],
-      playoffs: ['2011', '2014', '2016', '2018', '2019', '2020', '2023']
+      playoffs: ['2011', '2014', '2016', '2018', '2019', '2020', '2023', '2024']
     },
     {
       id: 2, espnId: 10, firstname: 'Chad', lastname: 'Oglesby', champion: ['2012', '2016', '2023'],
@@ -41,7 +41,7 @@ export class MemberService {
     {
       id: 5, espnId: 17, firstname: 'Kevin', lastname: 'Bandy', champion: ['2019', '2021'],
       teamname: ['Atlanta Sausage Kings', 'PSU Shower Todd LeFondlers', 'Show Me Your Torts', 'I Rest My Case Keenum'],
-      playoffs: ['2011', '2012', '2015', '2016', '2017', '2018', '2019', '2021']
+      playoffs: ['2011', '2012', '2015', '2016', '2017', '2018', '2019', '2021', '2024']
     },
     {
       id: 6, espnId: 4, firstname: 'Alex', lastname: 'Burtch', champion: [],
@@ -76,7 +76,7 @@ export class MemberService {
     {
       id: 11, espnId: 15, firstname: 'Korey', lastname: 'Schrock', champion: [],
       teamname: ['Master Mulatto', 'Paula Deen\'s Plantation'],
-      playoffs: ['2012', '2014', '2015', '2019', '2020', '2022']
+      playoffs: ['2012', '2014', '2015', '2019', '2020', '2022', '2024']
     },
     {
       id: 12, espnId: 6, firstname: 'Kameron', lastname: 'Chastain', champion: [],
@@ -109,10 +109,10 @@ export class MemberService {
       playoffs: ['2014', '2015', '2016', '2017', '2019', '2020', '2022']
     },
     {
-      id: 18, espnId: 20, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017', '2022'],
+      id: 18, espnId: 20, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017', '2022', '2024'],
       teamname: ['Gronkey Punch', 'Rawls in your Face', 'An InCAMvenient Truth', 'Johnson and Johnson', 'Two Browns One Kupp',
         'Jock Strap Kings', 'Dude Looks Like A Brady', 'Training Room Heroes', '28-3 and Me', 'Give your Footballs a Tug'],
-      playoffs: ['2017', '2019', '2021', '2022']
+      playoffs: ['2017', '2019', '2021', '2022', '2024']
     },
     {
       id: 19, espnId: 19, firstname: 'Rebekah', lastname: 'Epley', champion: ['2020'],

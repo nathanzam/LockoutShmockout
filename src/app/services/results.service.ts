@@ -1002,7 +1002,19 @@ export class ResultsService {
     { season: 2024, winnerId: 18, loserId: 3, winningScore: 138.92, losingScore: 104.62, weekNumber: 11 },
     { season: 2024, winnerId: 2, loserId: 4, winningScore: 153.56, losingScore: 124.78, weekNumber: 11 },
     { season: 2024, winnerId: 17, loserId: 1, winningScore: 138.94, losingScore: 138.1, weekNumber: 11 },
-    { season: 2024, winnerId: 5, loserId: 11, winningScore: 164.22, losingScore: 142.2, weekNumber: 11 }
+    { season: 2024, winnerId: 5, loserId: 11, winningScore: 164.22, losingScore: 142.2, weekNumber: 11 },
+    { season: 2024, winnerId: 18, loserId: 17, winningScore: 150.58, losingScore: 117.16, weekNumber: 12 },
+    { season: 2024, winnerId: 1, loserId: 4, winningScore: 159.64, losingScore: 159.02, weekNumber: 12 },
+    { season: 2024, winnerId: 2, loserId: 11, winningScore: 135.38, losingScore: 125.12, weekNumber: 12 },
+    { season: 2024, winnerId: 3, loserId: 5, winningScore: 118.44, losingScore: 94.38, weekNumber: 12 },
+    { season: 2024, winnerId: 1, loserId: 18, winningScore: 161.02, losingScore: 133.02, weekNumber: 13 },
+    { season: 2024, winnerId: 11, loserId: 4, winningScore: 149.5, losingScore: 136.16, weekNumber: 13 },
+    { season: 2024, winnerId: 2, loserId: 3, winningScore: 116.62, losingScore: 112.92, weekNumber: 13 },
+    { season: 2024, winnerId: 5, loserId: 17, winningScore: 159.14, losingScore: 125.18, weekNumber: 13 },
+    { season: 2024, winnerId: 4, loserId: 18, winningScore: 170.32, losingScore: 142.12, weekNumber: 14 },
+    { season: 2024, winnerId: 3, loserId: 11, winningScore: 130.54, losingScore: 129.24, weekNumber: 14 },
+    { season: 2024, winnerId: 1, loserId: 5, winningScore: 176.02, losingScore: 133.04, weekNumber: 14 },
+    { season: 2024, winnerId: 17, loserId: 2, winningScore: 126.72, losingScore: 121.54, weekNumber: 14 }
   ];
 
   //{ season: 2024, winnerId: , loserId: , winningScore: , losingScore: , weekNumber:  },
