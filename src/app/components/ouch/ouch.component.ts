@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Member, MemberLuck } from '../../interfaces/member';
-import { Result, ResultNames } from '../../interfaces/result';
+import { Result } from '../../interfaces/result';
 import { Score } from '../../interfaces/score';
-import { Summary } from '../../interfaces/summary';
 import { MemberService } from '../../services/member-service.service';
 import { ResultsService } from '../../services/results.service';
 import { ScoreService } from '../../services/score.service';
@@ -38,7 +37,7 @@ export class OuchComponent implements OnInit {
     var luckyWeeks: Score[] = [];
     var unluckyWeeks: Score[] = [];
     var manager = this.members[id - 1].firstname + ' ' + this.members[id - 1].lastname;
-    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     for (var season of seasons) {
       if (season > 2020) {

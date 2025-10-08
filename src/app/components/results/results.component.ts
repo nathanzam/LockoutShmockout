@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Member } from '../../interfaces/member';
 import { Result, ResultNames } from '../../interfaces/result';
 import { MemberService } from '../../services/member-service.service';
-import { MovesService } from 'src/app/services/moves.service';
 import { ResultsService } from '../../services/results.service';
-import { TableModule, Table } from 'primeng/table';
-import { InputTextModule } from 'primeng/inputtext';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-results',
@@ -19,7 +17,6 @@ export class ResultsComponent implements OnInit {
   resultsWithNames: ResultNames[] = [];
 
   constructor(private memberService: MemberService,
-    private moveService: MovesService,
     private resultService: ResultsService) { }
 
   ngOnInit(): void {

@@ -160,7 +160,15 @@ export class MovesService {
     { id: 5, season: 2024, moves: 13, draft: 7 },
     { id: 11, season: 2024, moves: 13, draft: 4 },
     { id: 17, season: 2024, moves: 28, draft: 5 },
-    { id: 18, season: 2024, moves: 14, draft: 1 }
+    { id: 18, season: 2024, moves: 14, draft: 1 },
+    { id: 1, season: 2025, moves: 14, draft: 1 },
+    { id: 2, season: 2025, moves: 4, draft: 8 },
+    { id: 3, season: 2025, moves: 5, draft: 5 },
+    { id: 4, season: 2025, moves: 2, draft: 7 },
+    { id: 5, season: 2025, moves: 2, draft: 6 },
+    { id: 11, season: 2025, moves: 8, draft: 2 },
+    { id: 17, season: 2025, moves: 9, draft: 4 },
+    { id: 18, season: 2025, moves: 3, draft: 3 }
   ];
 
   getAllManagerMovesCount(): Moves[] {

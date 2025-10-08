@@ -5,9 +5,6 @@ import { ResultsService } from '../../services/results.service';
 import { ScoreService } from '../../services/score.service';
 import { Member, MemberPlus } from '../../interfaces/member';
 import { UserRecord } from '../../interfaces/record';
-import { TableModule } from 'primeng/table';
-import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-league-members',

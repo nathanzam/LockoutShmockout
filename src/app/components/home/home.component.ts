@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../../interfaces/member';
-import { Result, ResultNames } from '../../interfaces/result';
+import { Result } from '../../interfaces/result';
 import { Score } from '../../interfaces/score';
 import { Summary } from '../../interfaces/summary';
 import { MemberService } from '../../services/member-service.service';
 import { MovesService } from 'src/app/services/moves.service';
 import { ResultsService } from '../../services/results.service';
 import { ScoreService } from '../../services/score.service';
-import { TableModule, Table } from 'primeng/table';
-import { DropdownModule } from 'primeng/dropdown';
+import { Table } from 'primeng/table';
 import { SelectItem, SortEvent } from 'primeng/api';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-home',
@@ -29,8 +25,9 @@ export class HomeComponent implements OnInit {
   records: Result[] = [];
   summaries: Summary[] = [];
   summary: any;
-  season: number = 2024;
+  season: number = 2025;
   seasons: SelectItem[] = [
+    { label: '2025', value: 2025 },
     { label: '2024', value: 2024 },
     { label: '2023', value: 2023 },
     { label: '2022', value: 2022 },
