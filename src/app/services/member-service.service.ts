@@ -15,33 +15,33 @@ export class MemberService {
       teamname: ['P-Mac Cat Hoarders', 'Afrikaan Starving Joos', 'The Zam Turn Yo Head n\' Kovs', 'DeeZ Nuts On Yo\' Chinzzzz',
         'Golden Tate of Mind', 'Cpt. Kirk and The Gurley Boys', 'Cool Brees Hits David\'s Johnson', 'Kittles- Taste The Asshole',
         'Saquondered My Chance', 'Discount Deebo Check', 'League Killer', 'My Butker Hurts', 'I Shaved My Balls For This?',
-        'Vaccines Give You Autism'],
+        'Vaccines Give You Autism', 'Maye I Kittle Your Henry?', 'Live oLave Love'],
       playoffs: ['2011', '2014', '2016', '2018', '2019', '2020', '2023', '2024']
     },
     {
-      id: 2, espnId: 10, firstname: 'Chad', lastname: 'Oglesby', champion: ['2012', '2016', '2023'],
+      id: 2, espnId: 10, firstname: 'Chad', lastname: 'Oglesby', champion: ['2012', '2016', '2023', '2025'],
       teamname: ['Drink til the Pink Dont Stink', 'Bob Loblaw\'s Law Bloggers', 'Muff Huckers', 'Michael Sam\'s Cleatsssss',
-        'Taint Taco Aficionado', 'Zeke and Bell Rollin Blounts', 'Shat the Bed'],
-      playoffs: ['2011', '2012', '2013', '2016', '2023']
+        'Taint Taco Aficionado', 'Zeke and Bell Rollin Blounts', 'Shat the Bed', 'Skat The Bed'],
+      playoffs: ['2011', '2012', '2013', '2016', '2023', '2025']
     },
     {
       id: 3, espnId: 8, firstname: 'Peyton', lastname: 'Bobo', champion: ['2013', '2014', '2018'],
       teamname: ['Neverland Lost Boys', 'Texas Lone Ranger', 'Ridgemont High Bad Teacher', 'Baaaadaaaass G.O.A.T.',
         'Thoughts from Willy Wonka', 'Yellow Rose of Texas', 'Hanging with Mr. Bobo', 'Cooper? More Like Pooper',
         'Got Me A Little Chubby', 'Feb 2nd × Idiot = COVID', 'Something TBD', 'Girl Dad AKA Daddyman', 'Worst Team Name Ever'],
-      playoffs: ['2011', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021', '2023']
+      playoffs: ['2011', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2021', '2023', '2025']
     },
     {
       id: 4, espnId: 2, firstname: 'Kenny', lastname: 'Crapse', champion: [],
       teamname: ['Wichita, Kan. Bout Willis', 'Redskins Name Changing Assoc.', 'Every Day I\'m Russell\'n',
         'Isaiah Fisher\'s Stepdad', 'Make AMurrayca Great Again', 'DeMarcoroni And Cheese', 'Miami Guice',
         'Fantasy Football Team'],
-      playoffs: ['2011', '2012', '2014', '2017', '2020', '2021', '2022', '2023']
+      playoffs: ['2011', '2012', '2014', '2017', '2020', '2021', '2022', '2023', '2025']
     },
     {
       id: 5, espnId: 17, firstname: 'Kevin', lastname: 'Bandy', champion: ['2019', '2021'],
       teamname: ['Atlanta Sausage Kings', 'PSU Shower Todd LeFondlers', 'Show Me Your Torts', 'I Rest My Case Keenum'],
-      playoffs: ['2011', '2012', '2015', '2016', '2017', '2018', '2019', '2021', '2024']
+      playoffs: ['2011', '2012', '2015', '2016', '2017', '2018', '2019', '2021', '2024', '2025']
     },
     {
       id: 6, espnId: 4, firstname: 'Alex', lastname: 'Burtch', champion: [],
@@ -105,13 +105,15 @@ export class MemberService {
     },
     {
       id: 17, espnId: 18, firstname: 'Nikolas', lastname: 'Sachs', champion: [],
-      teamname: ['Panama Diabolos Rojos', 'The Token Austrian', 'Forest City Explosive Trees', 'Get Buckets'],
+      teamname: ['Panama Diabolos Rojos', 'The Token Austrian', 'Forest City Explosive Trees', 'Get Buckets',
+        'Political Refugee Asylum'],
       playoffs: ['2014', '2015', '2016', '2017', '2019', '2020', '2022']
     },
     {
       id: 18, espnId: 20, firstname: 'Nathan', lastname: 'Zamkov', champion: ['2017', '2022', '2024'],
       teamname: ['Gronkey Punch', 'Rawls in your Face', 'An InCAMvenient Truth', 'Johnson and Johnson', 'Two Browns One Kupp',
-        'Jock Strap Kings', 'Dude Looks Like A Brady', 'Training Room Heroes', '28-3 and Me', 'Give your Footballs a Tug'],
+        'Jock Strap Kings', 'Dude Looks Like A Brady', 'Training Room Heroes', '28-3 and Me', 'Give your Footballs a Tug',
+        'Restoring Croskey-Merritt Based', 'God Hates Jags'],
       playoffs: ['2017', '2019', '2021', '2022', '2024']
     },
     {

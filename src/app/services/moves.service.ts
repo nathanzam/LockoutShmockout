@@ -161,14 +161,22 @@ export class MovesService {
     { id: 11, season: 2024, moves: 13, draft: 4 },
     { id: 17, season: 2024, moves: 28, draft: 5 },
     { id: 18, season: 2024, moves: 14, draft: 1 },
-    { id: 1, season: 2025, moves: 14, draft: 1 },
-    { id: 2, season: 2025, moves: 4, draft: 8 },
-    { id: 3, season: 2025, moves: 5, draft: 5 },
-    { id: 4, season: 2025, moves: 2, draft: 7 },
-    { id: 5, season: 2025, moves: 2, draft: 6 },
-    { id: 11, season: 2025, moves: 8, draft: 2 },
-    { id: 17, season: 2025, moves: 9, draft: 4 },
-    { id: 18, season: 2025, moves: 3, draft: 3 }
+    { id: 1, season: 2025, moves: 36, draft: 1 },
+    { id: 2, season: 2025, moves: 13, draft: 8 },
+    { id: 3, season: 2025, moves: 23, draft: 5 },
+    { id: 4, season: 2025, moves: 11, draft: 7 },
+    { id: 5, season: 2025, moves: 17, draft: 6 },
+    { id: 11, season: 2025, moves: 20, draft: 2 },
+    { id: 17, season: 2025, moves: 39, draft: 4 },
+    { id: 18, season: 2025, moves: 8, draft: 3 },
+    { id: 1, season: 2026, moves: 0, draft: 3 },
+    { id: 2, season: 2026, moves: 1, draft: 2 },
+    { id: 3, season: 2026, moves: 0, draft: 5 },
+    { id: 4, season: 2026, moves: 1, draft: 1 },
+    { id: 5, season: 2026, moves: 0, draft: 8 },
+    { id: 11, season: 2026, moves: 0, draft: 4 },
+    { id: 17, season: 2026, moves: 1, draft: 7 },
+    { id: 18, season: 2026, moves: 1, draft: 6 }
   ];
 
   getAllManagerMovesCount(): Moves[] {

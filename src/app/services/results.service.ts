@@ -1034,7 +1034,47 @@ export class ResultsService {
     { season: 2025, winnerId: 5, loserId: 18, winningScore: 187.38, losingScore: 152.36, weekNumber: 5 },
     { season: 2025, winnerId: 4, loserId: 17, winningScore: 137.36, losingScore: 102.26, weekNumber: 5 },
     { season: 2025, winnerId: 3, loserId: 11, winningScore: 190.1, losingScore: 125.3, weekNumber: 5 },
-    { season: 2025, winnerId: 2, loserId: 1, winningScore: 157.82, losingScore: 93.1, weekNumber: 5 }
+    { season: 2025, winnerId: 2, loserId: 1, winningScore: 157.82, losingScore: 93.1, weekNumber: 5 },
+    { season: 2025, winnerId: 18, loserId: 2, winningScore: 130.74, losingScore: 106.1, weekNumber: 6 },
+    { season: 2025, winnerId: 4, loserId: 3, winningScore: 134.96, losingScore: 124.5, weekNumber: 6 },
+    { season: 2025, winnerId: 5, loserId: 17, winningScore: 127.04, losingScore: 118.8, weekNumber: 6 },
+    { season: 2025, winnerId: 11, loserId: 1, winningScore: 121.98, losingScore: 110.14, weekNumber: 6 },
+    { season: 2025, winnerId: 11, loserId: 18, winningScore: 166.9, losingScore: 127.72, weekNumber: 7 },
+    { season: 2025, winnerId: 4, loserId: 5, winningScore: 112.72, losingScore: 82.16, weekNumber: 7 },
+    { season: 2025, winnerId: 3, loserId: 1, winningScore: 159.88, losingScore: 134, weekNumber: 7 },
+    { season: 2025, winnerId: 2, loserId: 17, winningScore: 187.56, losingScore: 144, weekNumber: 7 },
+    { season: 2025, winnerId: 3, loserId: 18, winningScore: 211.46, losingScore: 113.26, weekNumber: 8 },
+    { season: 2025, winnerId: 4, loserId: 1, winningScore: 138.98, losingScore: 116.7, weekNumber: 8 },
+    { season: 2025, winnerId: 2, loserId: 5, winningScore: 113.1, losingScore: 110.9, weekNumber: 8 },
+    { season: 2025, winnerId: 11, loserId: 17, winningScore: 146, losingScore: 108.88, weekNumber: 8 },
+    { season: 2025, winnerId: 1, loserId: 18, winningScore: 148.32, losingScore: 100.32, weekNumber: 9 },
+    { season: 2025, winnerId: 4, loserId: 2, winningScore: 165.94, losingScore: 121.1, weekNumber: 9 },
+    { season: 2025, winnerId: 5, loserId: 11, winningScore: 157.16, losingScore: 126.28, weekNumber: 9 },
+    { season: 2025, winnerId: 17, loserId: 3, winningScore: 110.74, losingScore: 92.34, weekNumber: 9 },
+    { season: 2025, winnerId: 4, loserId: 18, winningScore: 155.92, losingScore: 116.84, weekNumber: 10 },
+    { season: 2025, winnerId: 2, loserId: 11, winningScore: 131.22, losingScore: 116.2, weekNumber: 10 },
+    { season: 2025, winnerId: 1, loserId: 17, winningScore: 115.54, losingScore: 94.36, weekNumber: 10 },
+    { season: 2025, winnerId: 5, loserId: 3, winningScore: 153.16, losingScore: 152.32, weekNumber: 10 },
+    { season: 2025, winnerId: 17, loserId: 18, winningScore: 110.6, losingScore: 79.96, weekNumber: 11 },
+    { season: 2025, winnerId: 11, loserId: 4, winningScore: 130, losingScore: 111.3, weekNumber: 11 },
+    { season: 2025, winnerId: 2, loserId: 3, winningScore: 143.46, losingScore: 94.86, weekNumber: 11 },
+    { season: 2025, winnerId: 5, loserId: 1, winningScore: 180, losingScore: 122.76, weekNumber: 11 },
+    { season: 2025, winnerId: 18, loserId: 5, winningScore: 99.24, losingScore: 97.06, weekNumber: 12 },
+    { season: 2025, winnerId: 4, loserId: 17, winningScore: 146.98, losingScore: 124.12, weekNumber: 12 },
+    { season: 2025, winnerId: 3, loserId: 11, winningScore: 130.66, losingScore: 99.48, weekNumber: 12 },
+    { season: 2025, winnerId: 2, loserId: 1, winningScore: 159.04, losingScore: 133.98, weekNumber: 12 },
+    { season: 2025, winnerId: 2, loserId: 18, winningScore: 179.14, losingScore: 109, weekNumber: 13 },
+    { season: 2025, winnerId: 3, loserId: 4, winningScore: 109.28, losingScore: 108.92, weekNumber: 13 },
+    { season: 2025, winnerId: 5, loserId: 17, winningScore: 114.18, losingScore: 95.16, weekNumber: 13 },
+    { season: 2025, winnerId: 1, loserId: 11, winningScore: 120.22, losingScore: 119.26, weekNumber: 13 },
+    { season: 2025, winnerId: 18, loserId: 11, winningScore: 137.46, losingScore: 120.54, weekNumber: 14 },
+    { season: 2025, winnerId: 4, loserId: 5, winningScore: 104.14, losingScore: 97, weekNumber: 14 },
+    { season: 2025, winnerId: 3, loserId: 1, winningScore: 116.06, losingScore: 107.58, weekNumber: 14 },
+    { season: 2025, winnerId: 2, loserId: 17, winningScore: 157.3, losingScore: 122.78, weekNumber: 14 },
+    { season: 2026, winnerId: 3, loserId: 18, winningScore: 127.44, losingScore: 120.14, weekNumber: 1 },
+    { season: 2026, winnerId: 4, loserId: 1, winningScore: 180.76, losingScore: 153.58, weekNumber: 1 },
+    { season: 2026, winnerId: 5, loserId: 2, winningScore: 134.98, losingScore: 110.86, weekNumber: 1 },
+    { season: 2026, winnerId: 17, loserId: 11, winningScore: 111.32, losingScore: 110.42, weekNumber: 1 }
 
   ];
 
@@ -1106,7 +1146,7 @@ export class ResultsService {
 
   getWeeksAgainstNumber1Scorer(id: number): UnluckyRecord[] {
     var recordsArray = [];
-    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+    var seasons = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     for (var season of seasons) {
       var count = 0;

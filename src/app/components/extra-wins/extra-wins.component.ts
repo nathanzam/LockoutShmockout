@@ -7,12 +7,7 @@ import { MemberService } from '../../services/member-service.service';
 import { MovesService } from 'src/app/services/moves.service';
 import { ResultsService } from '../../services/results.service';
 import { ScoreService } from '../../services/score.service';
-import { TableModule, Table } from 'primeng/table';
-import { DropdownModule } from 'primeng/dropdown';
 import { SelectItem, SortEvent } from 'primeng/api';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-extra-wins',
@@ -29,8 +24,9 @@ export class ExtraWinsComponent implements OnInit {
   records: AltResult[] = [];
   summaries: Summary[] = [];
   summary: any;
-  season: number = 2025;
+  season: number = 2026;
   seasons: SelectItem[] = [
+    { label: '2026', value: 2026 },
     { label: '2025', value: 2025 },
     { label: '2024', value: 2024 },
     { label: '2023', value: 2023 },
@@ -158,7 +154,7 @@ export class ExtraWinsComponent implements OnInit {
 
   calculateTopHalf(id: number, week: number, season: number): boolean {
     var topHalfResult = false;
-    var seasonsWith8Teams = [2021, 2022, 2023,2024, 2025];
+    var seasonsWith8Teams = [2021, 2022, 2023,2024, 2025, 2026];
     var weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     if (this.season > 2020) {
       weeks.push(14);
