@@ -106,7 +106,7 @@ export class MemberService {
     {
       id: 17, espnId: 18, firstname: 'Nikolas', lastname: 'Sachs', champion: [],
       teamname: ['Panama Diabolos Rojos', 'The Token Austrian', 'Forest City Explosive Trees', 'Get Buckets',
-        'Political Refugee Asylum'],
+        'Political Refugee Asylum', 'Autodraft Mahomeys'],
       playoffs: ['2014', '2015', '2016', '2017', '2019', '2020', '2022']
     },
     {

@@ -1074,8 +1074,11 @@ export class ResultsService {
     { season: 2026, winnerId: 3, loserId: 18, winningScore: 127.44, losingScore: 120.14, weekNumber: 1 },
     { season: 2026, winnerId: 4, loserId: 1, winningScore: 180.76, losingScore: 153.58, weekNumber: 1 },
     { season: 2026, winnerId: 5, loserId: 2, winningScore: 134.98, losingScore: 110.86, weekNumber: 1 },
-    { season: 2026, winnerId: 17, loserId: 11, winningScore: 111.32, losingScore: 110.42, weekNumber: 1 }
-
+    { season: 2026, winnerId: 17, loserId: 11, winningScore: 111.32, losingScore: 110.42, weekNumber: 1 },
+    { season: 2026, winnerId: 18, loserId: 1, winningScore: 178.86, losingScore: 160.5, weekNumber: 2 },
+    { season: 2026, winnerId: 4, loserId: 2, winningScore: 122.9, losingScore: 88.76, weekNumber: 2 },
+    { season: 2026, winnerId: 5, loserId: 11, winningScore: 108.3, losingScore: 99.98, weekNumber: 2 },
+    { season: 2026, winnerId: 17, loserId: 3, winningScore: 136.24, losingScore: 109.62, weekNumber: 2 }
   ];
 
   //{ season: 2025, winnerId: , loserId: , winningScore: , losingScore: , weekNumber:  },
