@@ -175,7 +175,7 @@ export class MovesService {
     { id: 4, season: 2026, moves: 2, draft: 1 },
     { id: 5, season: 2026, moves: 2, draft: 8 },
     { id: 11, season: 2026, moves: 1, draft: 4 },
-    { id: 17, season: 2026, moves: 5, draft: 7 },
+    { id: 17, season: 2026, moves: 6, draft: 7 },
     { id: 18, season: 2026, moves: 1, draft: 6 }
   ];
 
