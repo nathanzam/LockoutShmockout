@@ -1090,10 +1090,14 @@ export class ResultsService {
     { season: 2026, winnerId: 18, winningScore: 177.38, loserId: 5, losingScore: 108.14, weekNumber: 5 },
     { season: 2026, winnerId: 17, winningScore: 187.5, loserId: 4, losingScore: 142.14, weekNumber: 5 },
     { season: 2026, winnerId: 11, winningScore: 140.62, loserId: 3, losingScore: 108.26, weekNumber: 5 },
-    { season: 2026, winnerId: 1, winningScore: 129.16, loserId: 2, losingScore: 119.86, weekNumber: 5 }
+    { season: 2026, winnerId: 1, winningScore: 129.16, loserId: 2, losingScore: 119.86, weekNumber: 5 },
+    { season: 2026, winnerId: 18, winningScore: 127.54, loserId: 2, losingScore: 87.74, weekNumber: 6 },
+    { season: 2026, winnerId: 3, winningScore: 126.2, loserId: 4, losingScore: 110.86, weekNumber: 6 },
+    { season: 2026, winnerId: 5, winningScore: 131.86, loserId: 17, losingScore: 118.08, weekNumber: 6 },
+    { season: 2026, winnerId: 1, winningScore: 111.64, loserId: 11, losingScore: 107.78, weekNumber: 6 }
   ];
 
-  //{ season: 2026, winnerId: , winningScore: , loserId: , losingScore: , weekNumber:  },
+    // { season: 2026, winnerId: , winningScore: , loserId: , losingScore: , weekNumber:  },
 
   getResults(): Result[] {
     return this.results;
